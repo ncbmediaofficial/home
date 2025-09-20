@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCB Media</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="shattawale.css">
+ </head>
+  <body>
+    <div class="wrapper">
+      <!-- Navigation Bar -->
+      <header class="top-header">
+        <div class="logo-container">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <img src="ncbmedialogo.png" alt="Logo" />
+            </div>
+          </a>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active" aria-label="Home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a href="videos.html" class="nav-link" aria-label="Videos">
+            <i class="fas fa-video"></i>
+            <span>Videos</span>
+          </a>
+          <a href="artists.html" class="nav-link" aria-label="Artists">
+            <i class="fas fa-microphone-alt"></i>
+            <span>Artists</span>
+          </a>
+          <a href="aboutncbmedia.html" class="nav-link" aria-label="About">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+          </a>
+        </div>
+
+        <div class="actions-container">
+          <button
+            class="action-btn"
+            aria-label="Search"
+            data-panel="search-panel"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+          <button
+            class="action-btn"
+            aria-label="Notifications"
+            data-panel="notifications-panel"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </button>
+          <button
+            class="action-btn"
+            aria-label="Subscribe"
+            data-panel="subscribe-panel"
+          >
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
+      </header>
+
+      <nav class="bottom-nav">
+        <a href="index.html" class="nav-link active" aria-label="Home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="videos.html" class="nav-link" aria-label="Videos">
+          <i class="fas fa-video"></i>
+          <span>Videos</span>
+        </a>
+        <a href="artists.html" class="nav-link" aria-label="Artists">
+          <i class="fas fa-microphone-alt"></i>
+          <span>Artists</span>
+        </a>
+        <a href="aboutncbmedia.html" class="nav-link" aria-label="About">
+          <i class="fas fa-info-circle"></i>
+          <span>About</span>
+        </a>
+      </nav>
+
+      <!-- Artist Profile Header -->
+      <div class="profile-header">
+        <div class="cover-image"></div>
+
+        <div class="profile-image-container">
+          <div class="profile-image">
+            <img src="shattawale.jpeg" alt="Shatta Wale" />
+          </div>
+        </div>
+
+        <div class="profile-info">
+          <div class="artist-info">
+            <h1 class="artist-name">Shatta Wale</h1>
+            <div class="artist-location">
+              <div class="flag">GH</div>
+              <span>Ghana Accra, GH</span>
+            </div>
+
+            <div class="badge-container">
+              <div class="category-badge">Dancehall Music Artist</div>
+              <div class="status-badge">
+                <i class="material-icons"></i>
+                <span>hot</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-value">10.5M</div>
+              <div class="stat-label">Followers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">1.2b</div>
+              <div class="stat-label">Streams</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">2456</div>
+              <div class="stat-label">Tracks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Tabs -->
+      <div class="profile-tabs">
+        <div class="tabs-container">
+          <a href="#posts" class="tab active" data-tab="posts">
+            <i class="material-icons">article</i>
+            <span>Posts</span>
+          </a>
+          <a href="#events" class="tab" data-tab="events">
+            <i class="material-icons">event</i>
+            <span>Events</span>
+          </a>
+          <a href="#gallery" class="tab" data-tab="gallery">
+            <i class="material-icons">photo_library</i>
+            <span>Gallery</span>
+          </a>
+          <a href="#about" class="tab" data-tab="about">
+            <i class="material-icons">person</i>
+            <span>About</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Story Section -->
+      <section class="stories-section">
+        <div class="container">
+          <h2 class="section-title">
+            <i class="fas fa-play-circle"></i> Featured Artists
+          </h2>
+          <div class="stories-container">
+            <div class="story">
+              <a href="shattawale.html">
+                <img
+                  src="shattawale.jpeg"
+                  alt="Shatta Wale"
+                  class="story-img"
+                />
+                <div class="story-name">Shatta Wale</div>
+              </a>
+            </div>
+            <!-- <div class="story">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=100&q=80" alt="Artist" class="story-img">
+                    <div class="story-name">DJ Marcus</div>
+                </div>
+                <div class="story">
+                    <img src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?auto=format&fit=crop&w=100&q=80" alt="Artist" class="story-img">
+                    <div class="story-name">The Strings</div>
+                </div>
+                <div class="story">
+                    <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=100&q=80" alt="Artist" class="story-img">
+                    <div class="story-name">Luna Beat</div>
+                </div>
+                <div class="story">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=100&q=80" alt="Artist" class="story-img">
+                    <div class="story-name">Alex Drums</div>
+                </div>
+                <div class="story">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=100&q=80" alt="Artist" class="story-img">
+                    <div class="story-name">Electro Vibes</div>
+                </div>
+                <div class="story">
+                    <img src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?auto=format&fit=crop&w=100&q=80" alt="Artist" class="story-img">
+                    <div class="story-name">Melody Makers</div>
+                </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content Container with Tab Content and Adverts -->
+      <div class="main-content-container">
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Posts Section -->
+          <section id="posts" class="tab-pane active">
+            <h2 class="section-title">Latest Posts</h2>
+            <div class="posts-grid">
+              <div class="post-card">
+                <div class="post-header">
+                  <img
+                    src="shattawale.jpeg"
+                    alt="Shatta Wale"
+                    class="post-avatar"
+                  />
+                  <div>
+                    <div class="post-user">Shatta Wale</div>
+                    <div class="post-time">08/21/2025</div>
+                  </div>
+                </div>
+                <!-- NEW: Post container wrapper -->
+                <div class="post-container">
+                  <div class="post-content">
+                    <h5>
+                      NCB Media Appoints Shatta Wale as First Artist & Governor
+                      — A New Chapter for Music and Community
+                    </h5>
+                    <p class="post-text">
+                      NCB Media is proud to announce the appointment of
+                      <em>Shatta Wale</em> as our very first artist and Governor
+                      — a milestone that marks the beginning of a bold new
+                      chapter in storytelling, artist empowerment, and
+                      community-driven growth.
+                    </p>
+                    <h5>Why Shatta Wale?</h5>
+                    <p class="post-text">
+                      <em>Shatta Wale</em> isn’t just a Reggae-Dancehall star —
+                      he’s a cultural force. His career is built on
+                      authenticity, grit, and an unshakable connection to the
+                      people. From lifting up young talent to using his platform
+                      to spark conversation and opportunity,
+                      <em>Shatta Wale</em> exemplifies the values we celebrate
+                      at NCB Media: resilience, creativity, and community
+                      leadership.
+                    </p>
+                    <h5>Why he’s our first pick</h5>
+                    <p class="post-text">
+                      At NCB Media we aim to document artists’ full stories —
+                      their beginnings, milestones, struggles, and triumphs — so
+                      their influence is understood in context. To launch that
+                      mission, we wanted someone who represents strength,
+                      relevance, and the power to inspire.
+                      <em>Shatta Wale</em> is that person. He’s more than a
+                      musician — he’s a movement: consistently viral,
+                      relentlessly creative, and deeply influential across
+                      African music scenes. Choosing Shatta Wale as our
+                      inaugural artist and Governor sends a clear signal about
+                      what NCB Media stands for: authentic storytelling, youth
+                      uplift, and artistic excellence.
+                    </p>
+                    <div class="highlight-box">
+                      <p>
+                        <strong>Note:</strong> Shatta Wale embodies the spirit
+                        of never giving up — he’s not only a chart-topper but a
+                        leader who lifts others as he rises.
+                      </p>
+                    </div>
+                    <h5>What this means for artists and fans</h5>
+                    <p class="post-text">
+                      With <em>Shatta Wale</em> at the helm, NCB Media will
+                      spotlight full artist narratives — the successes and the
+                      struggles — while building programs and features that help
+                      emerging talents gain visibility and resources. Fans
+                      should expect richer bios, exclusive features, and content
+                      that goes beyond headlines to capture the real influence
+                      artists have on culture and community.
+                    </p>
+                    <h5>Join the movement</h5>
+                    <p class="post-text">
+                      Follow NCB Media for exclusive stories, curated features,
+                      and the official launch content with
+                      <em>Shatta Wale.</em> Whether you’re an artist, a fan, or
+                      someone who loves music culture — this is where the full
+                      story gets told.
+                    </p>
+                    <img
+                      src="shattawaleappoint.png"
+                      alt="shatta wale post"
+                      class="post-image"
+                    />
+                  </div>
+                </div>
+                <!-- <div class="post-actions">
+                                <div class="post-action">
+                                    <i class="material-icons">favorite_border</i>
+                                    <span>243</span>
+                                </div>
+                                <div class="post-action">
+                                    <i class="material-icons">chat_bubble_outline</i>
+                                    <span>42</span>
+                                </div>
+                                <div class="post-action">
+                                    <i class="material-icons">share</i>
+                                </div>
+                            </div> -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Events Section -->
+          <section id="events" class="tab-pane">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-container">
+              <div class="event-card">
+                <img
+                  src="shattawaleevent.png"
+                  alt="shatta wale event"
+                  class="event-image"
+                />
+                <div class="event-content">
+                  <h3 class="event-title">Afro Plus Fest</h3>
+                  <div class="event-details">
+                    <div class="event-detail">
+                      <i class="material-icons">calendar_today</i>
+                      <span>August 31, 2025</span>
+                    </div>
+                    <!-- <div class="event-detail">
+                      <i class="material-icons">schedule</i>
+                       <span>8:00 PM - 2:00 AM</span>
+                    </div> -->
+                    <div class="event-detail">
+                      <i class="material-icons">location_on</i>
+                      <span>Washington, DC</span>
+                    </div>
+                  </div>
+                  <div class="event-buttons">
+                    <button class="event-btn primary">Buy Tickets</button>
+                    <button class="event-btn secondary">Remind Me</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-card">
+                <img
+                  src="shattawaleafahye.png"
+                  alt="Afahyɛ Rave"
+                  class="event-image"
+                />
+                <div class="event-content">
+                  <h3 class="event-title">Afahyɛ Rave</h3>
+                  <div class="event-details">
+                    <div class="event-detail">
+                      <i class="material-icons">calendar_today</i>
+                      <span>September 5, 2025</span>
+                    </div>
+                    <!-- <div class="event-detail">
+                      <i class="material-icons">schedule</i>
+                      <span>7:30 PM - 11:00 PM</span>
+                    </div> -->
+                    <div class="event-detail">
+                      <i class="material-icons">location_on</i>
+                      <span>Cape Coast</span>
+                    </div>
+                  </div>
+                  <div class="event-buttons">
+                    <button class="event-btn primary">Buy Tickets</button>
+                    <button class="event-btn secondary">Remind Me</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-card">
+                <img
+                  src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="DJ Set"
+                  class="event-image"
+                />
+                <div class="event-content">
+                  <h3 class="event-title">Afrofest</h3>
+                  <div class="event-details">
+                    <div class="event-detail">
+                      <i class="material-icons">calendar_today</i>
+                      <span>No Date Now</span>
+                    </div>
+                    <!-- <div class="event-detail">
+                      <i class="material-icons">schedule</i>
+                      <span>11:00 PM - 4:00 AM</span>
+                    </div> -->
+                    <div class="event-detail">
+                      <i class="material-icons">location_on</i>
+                      <span>Washington, DC</span>
+                    </div>
+                  </div>
+                  <div class="event-buttons">
+                    <button class="event-btn primary">RSVP</button>
+                    <button class="event-btn secondary">Remind Me</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Gallery Section -->
+          <section id="gallery" class="tab-pane">
+            <div class="section-title">
+              <h2>Shatta Wale Music Videos</h2>
+            </div>
+            <div class="videos-container">
+              <div class="video-card">
+                <div class="video-thumb">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Aq38sJGjVJM?si=fimVQDMvg6-5mcKr"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video-info">
+                  <h3>God Is Here</h3>
+                  <div class="video-meta">
+                    <span>2025 • Official Video</span>
+                    <span>77k views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card">
+                <div class="video-thumb">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/JOJh7nBVg4k?si=XBwSXyQ2kovND-Sm"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video-info">
+                  <h3>Street Crown</h3>
+                  <div class="video-meta">
+                    <span>2025 • Official Video</span>
+                    <span>1.5M views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card">
+                <div class="video-thumb">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/9WOrpbszcIk?si=FSkDxs70aZ1o1e4y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                  <h3>Ayoo</h3>
+                  <div class="video-meta">
+                    <span>2017 •Release</span>
+                    <span>18M views</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card">
+                <div class="video-thumb">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/QWUVncnTNNE?si=PzeVy8qHAQTFZtVl"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="video-info">
+                  <h3>Taking Over</h3>
+                  <div class="video-meta">
+                    <span>2017 •Release</span>
+                    <span>24M views</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-title">
+              <h2>Stream On All Platforms</h2>
+            </div>
+            <div class="platforms-container">
+              <div class="platform-card">
+                <div class="platform-icon">
+                  <i class="fab fa-apple"></i>
+                </div>
+                <h3>Apple Music</h3>
+                <a
+                  href="https://music.apple.com/us/artist/shatta-wale/690365212"
+                  class="platform-btn"
+                  target="_blank"
+                  >Listen Now</a
+                >
+              </div>
+              <div class="platform-card">
+                <div class="platform-icon">
+                  <i class="fab fa-spotify"></i>
+                </div>
+                <h3>Spotify</h3>
+                <a
+                  href="https://open.spotify.com/artist/42q0rYXtR561ypg1Fcw1PI?si=9KEqXslzRcKIkCvYDFZ8GA"
+                  class="platform-btn"
+                  target="_blank"
+                  >Listen Now</a
+                >
+              </div>
+              <div class="platform-card">
+                <div class="platform-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <h3>Audiomack</h3>
+                <a
+                  href="https://audiomack.com/search?q=shatta%20wale"
+                  class="platform-btn"
+                  target="_blank"
+                  >Listen Now</a
+                >
+              </div>
+              <div class="platform-card">
+                <div class="platform-icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <h3>YouTube Music</h3>
+                <a
+                  href="https://music.youtube.com/channel/UCuMENl8YwnhAXUC7RGddA6g?si=IEwKCOTZXTdlF2GL"
+                  class="platform-btn"
+                  target="_blank"
+                  >Listen Now</a
+                >
+              </div>
+              <div class="platform-card">
+                <div class="platform-icon">
+                  <i class="fas fa-headphones"></i>
+                </div>
+                <h3>Boomplay</h3>
+                <a
+                  href="https://www.boomplay.com/search/default/shatta%20wale"
+                  class="platform-btn"
+                  target="_blank"
+                  >Listen Now</a
+                >
+              </div>
+              <div class="platform-card">
+                <div class="platform-icon">
+                  <i class="fab fa-soundcloud"></i>
+                </div>
+                <h3>SoundCloud</h3>
+                <a
+                  href="https://soundcloud.com/search?q=shatta%20wale"
+                  class="platform-btn"
+                  target="_blank"
+                  >Listen Now</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- About Section -->
+          <section id="about" class="tab-pane">
+            <h2 class="section-title">About Shatta Wale</h2>
+
+            <div class="about-content">
+              <div class="about-section">
+                <h3>Biography</h3>
+                <p>
+                  Charles Nii Armah Mensah Jr. (born 17 October 1984),
+                  professionally known as Shatta Wale (formerly Bandana), is a
+                  Ghanaian reggae-dancehall artist, entrepreneur and cultural
+                  figure whose influence has reshaped Ghana’s contemporary music
+                  scene. Known for his energetic stagecraft and streetwise
+                  lyrical style, Shatta Wale is widely regarded as the
+                  “Dancehall King of Africa” and commands a large, loyal fanbase
+                  known as the SHATTA MOVEMENT [SM].
+                </p>
+              </div>
+
+              <div class="about-section">
+                <h3>Early life and education</h3>
+                <p>
+                  Shatta Wale was born at the Police Hospital in Accra to
+                  Charles Nii Armah Mensah Sr. and Elsie Evelyn Avemegah. He
+                  grew up in Accra suburbs including Laterbiokorshie, Dansoman
+                  and Korle Gonno. He attended Seven Great Princes Academy in
+                  Dansoman, where he developed an early interest in the
+                  performing arts and acted in stage dramas, and later completed
+                  his secondary education at Winneba Secondary School. In his
+                  youth he performed under the names “Doggy” and then “Bandana,”
+                  establishing an early presence in Ghana’s music landscape.
+                </p>
+              </div>
+
+              <div class="about-section">
+                <h3>Career and artistic evolution</h3>
+                <p>
+                  Shatta Wale first gained public attention in the mid-2000s
+                  with tracks such as “Moko Hoo” (featuring Tinny), which earned
+                  a Ghana Music Awards nomination in 2004. After several years
+                  away from the spotlight, he rebranded as Shatta Wale and
+                  staged a major comeback in 2013 with the hit “Dancehall King”,
+                  a single that propelled him to national prominence and won him
+                  Artiste of the Year at the 2014 Vodafone Ghana Music Awards.
+                </p>
+                <p>
+                  His sound blends dancehall and reggae with elements of
+                  hip-life, Afrobeats and hip-hop, producing music that is at
+                  once commercially potent and rooted in street culture. Shatta
+                  Wale has released multiple albums and mixtapes — including
+                  Green Times Mixtape (2014), Answers (The Hybrid) (2014), After
+                  the Storm (2016), Cloud 9 (2017), Reign (2018), Wonder Boy
+                  (2019), Manacles of a Shatta (2020), Maali (2023) and projects
+                  in 2024 such as Konekt and Shatta and Fans — and a stream of
+                  popular singles like “My Level”, “Gringo”, “Taking Over”, and
+                  “Hajia Bintu.”
+                </p>
+              </div>
+              <div class="about-section">
+                <h3>International work and recognition</h3>
+                <p>
+                  Shatta Wale’s international profile rose after a high-profile
+                  collaboration on Beyoncé’s “Already” from The Lion King: The
+                  Gift (2019), a remnant of his cross-border collaborations and
+                  global reach. He has performed internationally — including
+                  appearances in Jamaica — and has received a number of honors
+                  such as the Key to the City of Worcester (USA, 2017) and
+                  recognition at events like the Chicago Music Awards and the
+                  International Reggae & World Music Awards. In 2019 he set a
+                  record at the 3 Music Awards by winning 11 awards in a single
+                  ceremony.
+                </p>
+              </div>
+              <div class="about-section">
+                <h3>Concerts, initiatives and entrepreneurship</h3>
+                <p>
+                  Shatta Wale organized the Faith Concert (2020), one of Ghana’s
+                  first major digital concerts on YouTube, staged during the
+                  COVID-19 pandemic. He has launched talent-support initiatives
+                  such as the Accra Invasion Project (AIP) (announced September
+                  2024) to discover and mentor unsigned artists across Accra. He
+                  is also involved in brand partnerships and entrepreneurial
+                  ventures, including ambassador deals with companies such as
+                  Guinness Ghana, Storm Energy Drink (Kasapreko), Boss Baker
+                  Beef Roll, Infinix Ghana, and more; and a ride-hailing
+                  business referenced as Shaxi.
+                </p>
+              </div>
+              <div class="about-section">
+                <h3>Philanthropy and community work</h3>
+                <p>
+                  Shatta Wale has participated in community initiatives,
+                  including a public clean-up in Alajo supporting the “Buzstop
+                  Boys” (June 12, 2024), and other grassroots talent development
+                  projects through AIP. These activities reinforce his public
+                  persona as an artist committed to youth empowerment and
+                  community engagement.
+                </p>
+              </div>
+              <div class="about-section">
+                <h3>Controversies and legal matters</h3>
+                <p>
+                  Shatta Wale’s career has been punctuated by public
+                  controversies and legal incidents. Notably, in October 2021 he
+                  was arrested in relation to a staged hoax shooting that caused
+                  public alarm; he was later released on bail. He has also had
+                  high-profile feuds with other artists and industry figures
+                  (including disputes connected to the Vodafone Ghana Music
+                  Awards and with peers such as Stonebwoy and Sarkodie). More
+                  recently, in **June 2025** Ghana’s Economic and Organised
+                  Crime Office (EOCO) executed a search and seized a 2019
+                  Lamborghini Urus at his Trassaco Valley residence in
+                  connection with an international law-enforcement request;
+                  Shatta Wale voluntarily surrendered the vehicle and denied any
+                  criminal link while EOCO identified him as a person of
+                  interest pending further legal steps. (All dates and
+                  descriptions reflect reported accounts.)
+                </p>
+              </div>
+              <div class="about-section">
+                <h3>Personal life</h3>
+                <p>
+                  Shatta Wale’s personal life has been public and sometimes
+                  turbulent. He was in a long-running relationship with Michelle
+                  “Shatta Michy” Gbagonah; they have a son named Majesty and
+                  separated around 2019 amid widely reported personal disputes.
+                  In 2023 he publicly entered a relationship with Maali, and the
+                  couple announced the birth of their child in 2024. Reports
+                  also reference other children from previous relationships. He
+                  has at times spoken about future plans outside music,
+                  including an expressed interest in studying law.
+                </p>
+              </div>
+              <div class="about-section">
+                <h3>Legacy</h3>
+                <p>
+                  Shatta Wale is credited with elevating Ghanaian dancehall and
+                  expanding its commercial and cultural footprint both locally
+                  and internationally. His blend of provocative publicity,
+                  grassroots support, and prolific output has made him one of
+                  the country’s most influential — and polarizing — musical
+                  figures of the 2010s and 2020s. Whether through charting
+                  singles, viral moments, or community projects, his impact on
+                  contemporary Ghanaian music remains considerable.
+                </p>
+              </div>
+
+              <div class="about-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                  <a
+                    href="https://www.instagram.com/shattawalenima/?__pwa=1"
+                    class="social-link"
+                    aria-label="Instagram"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@shattawaleking?is_from_webapp=1&sender_device=pc" class="social-link" aria-label="tiktok">
+                   <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                  <a href="https://web.facebook.com/rasta.flex?_rdc=1&_rdr#" class="social-link" aria-label="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCb5XPdFG5KC05hy4mv0zi_A" class="social-link" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://x.com/shattawalegh" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Advert Container -->
+        <div class="advert-container">
+          <h2>Sponsored Content</h2>
+          <div class="advert-slider">
+            <div class="advert-slides">
+              <div class="advert-slide active">
+                <div class="advert-header">Premium Studio Headphones</div>
+                <div class="advert-text">
+                  Experience studio-quality sound with our new professional
+                  headphones. Perfect for music producers and audiophiles. 50%
+                  off for a limited time!
+                </div>
+                <div class="advert-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Premium Headphones"
+                  />
+                </div>
+                <a href="#" class="advert-cta">Shop Now</a>
+              </div>
+              <div class="advert-slide">
+                <div class="advert-header">Music Production Masterclass</div>
+                <div class="advert-text">
+                  Learn from industry experts with our comprehensive music
+                  production course. Includes mixing, mastering, and sound
+                  design modules.
+                </div>
+                <div class="advert-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Music Production"
+                  />
+                </div>
+                <a href="#" class="advert-cta">Enroll Today</a>
+              </div>
+              <div class="advert-slide">
+                <div class="advert-header">Summer Music Festival Passes</div>
+                <div class="advert-text">
+                  Get early bird tickets for the biggest music festival of the
+                  year! Featuring top EDM artists, exclusive afterparties, and
+                  more.
+                </div>
+                <div class="advert-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Music Festival"
+                  />
+                </div>
+                <a href="#" class="advert-cta">Buy Tickets</a>
+              </div>
+            </div>
+            <div class="advert-navigation">
+              <div class="advert-dot active" data-index="0"></div>
+              <div class="advert-dot" data-index="1"></div>
+              <div class="advert-dot" data-index="2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <div class="container">
+          <h2>Stay Updated with NCB Media</h2>
+          <p>
+            Subscribe to our newsletter for exclusive content, industry
+            insights, and special offers delivered straight to your inbox.
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <div class="overlay-main-container">
+        <!-- Overlay and Panels moved here -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Search Panel -->
+        <div class="panel" id="search-panel">
+          <div class="panel-header">
+            <h3 class="panel-title">Search Artists & Content</h3>
+            <button class="close-panel" aria-label="Close search panel">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search for artists, tracks, or albums..."
+            aria-label="Search input"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+
+        <!-- Notifications Panel -->
+        <div class="panel" id="notifications-panel">
+          <div class="panel-header">
+            <h3 class="panel-title">Notifications</h3>
+            <button class="close-panel" aria-label="Close notifications panel">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <ul class="notification-list">
+            <li class="notification-item">
+              <div class="notification-avatar">MJ</div>
+              <div class="notification-content">
+                <div class="notification-artist">Maya Johnson</div>
+                <div class="notification-text">
+                  Just released a new single "Midnight Dreams"
+                </div>
+                <div class="notification-time">2 hours ago</div>
+              </div>
+            </li>
+            <li class="notification-item">
+              <div class="notification-avatar">TK</div>
+              <div class="notification-content">
+                <div class="notification-artist">The Kicks</div>
+                <div class="notification-text">
+                  Added a new video to their channel
+                </div>
+                <div class="notification-time">5 hours ago</div>
+              </div>
+            </li>
+            <li class="notification-item">
+              <div class="notification-avatar">LR</div>
+              <div class="notification-content">
+                <div class="notification-artist">Luna Rivers</div>
+                <div class="notification-text">
+                  Started a live stream - join now!
+                </div>
+                <div class="notification-time">1 day ago</div>
+              </div>
+            </li>
+          </ul>
+          <a href="#" class="view-all">View All Notifications</a>
+        </div>
+
+        <!-- Subscribe Panel -->
+        <div class="panel" id="subscribe-panel">
+          <div class="panel-header">
+            <h3 class="panel-title">Subscribe to Updates</h3>
+            <button class="close-panel" aria-label="Close subscribe panel">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <p class="subscribe-text">
+            Get the latest news, releases, and artist updates delivered to your
+            inbox.
+          </p>
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Your email address"
+            aria-label="Email address"
+          />
+          <div class="radio-group">
+            <div class="radio-option">
+              <input
+                type="radio"
+                id="daily"
+                name="frequency"
+                value="daily"
+                checked
+              />
+              <label for="daily">Daily</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="weekly" name="frequency" value="weekly" />
+              <label for="weekly">Weekly</label>
+            </div>
+          </div>
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+
+        <!-- Lightbox for Gallery -->
+        <div class="lightbox" id="lightbox">
+          <div class="lightbox-close">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="lightbox-content">
+            <img src="" alt="Gallery Image" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-about">
+              <div class="logo-container">
+                <a href="#" class="logo">
+                  <div class="logo-icon">
+                    <img src="ncbmedialogo.png" alt="Logo" />
+                  </div>
+                </a>
+              </div>
+              <p>
+                A dedicated platform for musicians to learn, share, and grow. We
+                provide valuable resources, tutorials, and industry insights to
+                help you succeed in your musical journey.
+              </p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutncbmedia.html">About Us</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="videos.html">Videos</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links">
+              <h4>Contact Us</h4>
+              <ul>
+                <li><a href="aboutncbmedia.html#contactus">contact us</a></li>
+                <li>
+                  <a href="aboutncbmedia.html#sendatip">Send A Hot Tip</a>
+                </li>
+                <li>
+                  <a href="aboutncbmedia.html#advertisementinquiries"
+                    >Advertising Inquires</a
+                  >
+                </li>
+                <li>
+                  <a href="aboutncbmedia.html#mediainquiries">Media Inquires</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-links">
+              <h4>About NCB Media</h4>
+              <ul>
+                <li><a href="aboutncbmedia.html#about">About NCB Media</a></li>
+                <li>
+                  <a href="aboutncbmedia.html#privacypolicy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="aboutncbmedia.html#termsandconditions"
+                    >Terms of Service</a
+                  >
+                </li>
+                <li>
+                  <a href="aboutncbmedia.html#communityguidelines"
+                    >Community Guidelines</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>
+              &copy; 2025 NCB Media. All rights reserved. Designed with
+              <i class="fas fa-heart" style="color: #ff9800"></i> for musicians.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Scroll to top button -->
+      <div class="scroll-top">
+        <i class="material-icons">arrow_upward</i>
+      </div>
+    </div>
+    <script src="shattawale.js"></script>
+ </body>
+</html>

@@ -6,54 +6,30 @@
     <title>NCB Media</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="nbmediavideos.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "5bss0jQ2WCQiP00xw",
+      });
+   })();
+</script>
 </head>
 <body>
-    <div class="wrapper">
+     <div class="wrapper">
      <!-- Navigation Bar -->
-        <header class="top-header">
-            <div class="logo-container">
+    <header class="top-header">
+         <div class="logo-container">
                 <a href="#" class="logo">
                     <div class="logo-icon">
                         <img src="ncbmedialogo.png" alt="Logo">
                     </div>
                 </a>
             </div>
-            
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active" aria-label="Home">
-                    <i class="fas fa-home"></i>
-                    <span>Home</span>
-                </a>
-                <a href="videos.html" class="nav-link" aria-label="Videos">
-                    <i class="fas fa-video"></i>
-                    <span>Videos</span>
-                </a>
-                <a href="artists.html" class="nav-link" aria-label="Artists">
-                    <i class="fas fa-microphone-alt"></i>
-                    <span>Artists</span>
-                </a>
-                <a href="aboutncbmedia.html" class="nav-link" aria-label="About">
-                    <i class="fas fa-info-circle"></i>
-                    <span>About</span>
-                </a>
-            </div>
-            
-            
-            <div class="actions-container">
-                <button class="action-btn" aria-label="Search" data-panel="search-panel">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button class="action-btn" aria-label="Notifications" data-panel="notifications-panel">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-badge">3</span>
-                </button>
-                <button class="action-btn" aria-label="Subscribe" data-panel="subscribe-panel">
-                    <i class="fas fa-envelope"></i>
-                </button>
-            </div>
-        </header>
         
-        <nav class="bottom-nav">
+        <div class="nav-links">
             <a href="index.html" class="nav-link active" aria-label="Home">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
@@ -70,9 +46,42 @@
                 <i class="fas fa-info-circle"></i>
                 <span>About</span>
             </a>
-        </nav>
-           
-     <!-- Featured artists section -->
+        </div>
+        
+        <div class="actions-container">
+            <button class="action-btn" aria-label="Search" data-panel="search-panel">
+                <i class="fas fa-search"></i>
+            </button>
+            <button class="action-btn" aria-label="Notifications" data-panel="notifications-panel">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+            <button class="action-btn" aria-label="Subscribe" data-panel="subscribe-panel">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+    </header>
+    
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link active" aria-label="Home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="videos.html" class="nav-link" aria-label="Videos">
+            <i class="fas fa-video"></i>
+            <span>Videos</span>
+        </a>
+        <a href="artists.html" class="nav-link" aria-label="Artists">
+            <i class="fas fa-microphone-alt"></i>
+            <span>Artists</span>
+        </a>
+        <a href="aboutncbmedia.html" class="nav-link" aria-label="About">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+    </nav>
+       
+    <!-- Featured artists section -->
     <section class="stories-section" aria-labelledby="featured-artists-title">
         <div class="container">
             <h2 class="section-title" id="featured-artists-title">
@@ -81,7 +90,7 @@
             <div class="stories-container">
                 <div class="story">
                     <a href="shattawale.html">
-                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=100&q=80" alt="Sarah Keys" class="story-img">
+                    <img src="shattawale.jpeg" alt="Shatta Wale" class="story-img">
                     <div class="story-name">Shatta Wale</div>
                     </a>
                 </div>
@@ -115,35 +124,8 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- <div class="category-bar">
-            <button class="category-btn active">
-                <i class="fas fa-bolt"></i>
-                Trending
-            </button>
-            <button class="category-btn">
-                <i class="fas fa-music"></i>
-                Music
-            </button>
-            <button class="category-btn">
-                <i class="fas fa-gamepad"></i>
-                Gaming
-            </button>
-            <button class="category-btn">
-                <i class="fas fa-film"></i>
-                Movies
-            </button>
-            <button class="category-btn">
-                <i class="fas fa-newspaper"></i>
-                News
-            </button>
-            <button class="category-btn">
-                <i class="fas fa-basketball"></i>
-                Sports
-            </button>
-        </div> -->
-
         <div class="video-advert-container">
-            <!-- Ad Container - Appears FIRST on mobile/iPad -->
+            <!-- Ad Container -->
             <div class="ad-container">
                 <div class="ad-slides" id="adSlides">
                     <!-- Ad 1 -->
@@ -187,192 +169,216 @@
                 </div>
             </div>
             
-            <!-- Video Content -->
-            <div class="video-content">
-                <h2 style="margin-bottom: 20px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-fire" style="color: var(--primary);"></i>
-                    Trending Videos
-                </h2>
-  
-                
-                <section class="shatta-video-container">
-        <div class="shatta-video-gallery">
-            <!-- Video 1 -->
-            <article class="shatta-video-card">
-                <div class="shatta-video-header">
-                    <h3>Mountain Peaks</h3>
-                </div>
-                <div class="shatta-video-container">
-                    <video 
-                        controls 
-                        preload="metadata" 
-                        poster="thumb1.jpg"
-                        aria-label="Mountain Peaks - Aerial view of snow-capped mountain ranges">
-                        <source src="video1.mp4" type="video/mp4">
+            <!-- Main Video Container -->
+            <div class="main-video-conatiner">
+                <section id="MusicVideos" aria-label="Educational videos">
+        <h2>Watch Your favorite Artist Interview Here</h2>
+        <div class="music-videos-grid">
+            <!-- Video Card 1 -->
+            <article class="video-card">
+                <div class="video-media">
+                    <video controls preload="metadata" poster="./assets/images/video1.jpg" aria-label="Understanding Your Credit Score">
+                        <source src="./assets/videos/video1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="shatta-video-info">
-                    <p>Breathtaking views of majestic mountain ranges covered in snow.</p>
+                <div class="video-meta">
+                    <div class="video-meta-header">
+                        <img class="avatar" src="./assets/avatars/presenter1.jpg" alt="Sarah Johnson" loading="lazy">
+                        <h3>Understanding Your Credit Score</h3>
+                    </div>
+                    <p>Learn how credit scores are calculated and discover practical tips to improve your score over time.</p>
+                    <a href="#" class="transcript-link" data-transcript="transcript1">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        View Transcript
+                    </a>
                 </div>
             </article>
 
-            <!-- Video 2 -->
-            <article class="shatta-video-card">
-                <div class="shatta-video-header">
-                    <h3>Ocean Waves</h3>
-                </div>
-                <div class="shatta-video-container">
-                    <video 
-                        controls 
-                        preload="metadata" 
-                        poster="thumb2.jpg"
-                        aria-label="Ocean Waves - Calming waves crashing on a sandy beach">
-                        <source src="video2.mp4" type="video/mp4">
+            <!-- Video Card 2 -->
+            <article class="video-card">
+                <div class="video-media">
+                    <video controls preload="metadata" poster="./assets/images/video2.jpg" aria-label="Budgeting for Beginners">
+                        <source src="./assets/videos/video2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="shatta-video-info">
-                    <p>Relaxing scenes of ocean waves gently rolling onto a sandy shore.</p>
+                <div class="video-meta">
+                    <div class="video-meta-header">
+                        <img class="avatar" src="./assets/avatars/presenter2.jpg" alt="Michael Chen" loading="lazy">
+                        <h3>Budgeting for Beginners</h3>
+                    </div>
+                    <p>Create a simple yet effective budget that works for your lifestyle and financial goals.</p>
+                    <a href="#" class="transcript-link" data-transcript="transcript2">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        View Transcript
+                    </a>
                 </div>
             </article>
 
-            <!-- Video 3 -->
-            <article class="shatta-video-card">
-                <div class="shatta-video-header">
-                    <h3>Forest Wildlife</h3>
-                </div>
-                <div class="shatta-video-container">
-                    <video 
-                        controls 
-                        preload="metadata" 
-                        poster="thumb3.jpg"
-                        aria-label="Forest Wildlife - Animals in their natural forest habitat">
-                        <source src="video3.mp4" type="video/mp4">
+            <!-- Video Card 3 -->
+            <article class="video-card">
+                <div class="video-media">
+                    <video controls preload="metadata" poster="./assets/images/video3.jpg" aria-label="Investing Basics">
+                        <source src="./assets/videos/video3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="shatta-video-info">
-                    <p>Explore the diverse wildlife living in dense forest environments.</p>
+                <div class="video-meta">
+                    <div class="video-meta-header">
+                        <img class="avatar" src="./assets/avatars/presenter3.jpg" alt="Jessica Williams" loading="lazy">
+                        <h3>Investing Basics</h3>
+                    </div>
+                    <p>An introduction to investment concepts and strategies for building long-term wealth.</p>
+                    <a href="#" class="transcript-link" data-transcript="transcript3">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        View Transcript
+                    </a>
                 </div>
             </article>
 
-            <!-- Video 4 -->
-            <article class="shatta-video-card">
-                <div class="shatta-video-header">
-                    <h3>Desert Landscape</h3>
-                </div>
-                <div class="shatta-video-container">
-                    <video 
-                        controls 
-                        preload="metadata" 
-                        poster="thumb4.jpg"
-                        aria-label="Desert Landscape - Vast desert with sand dunes and clear skies">
-                        <source src="video4.mp4" type="video/mp4">
+            <!-- Video Card 4 -->
+            <article class="video-card">
+                <div class="video-media">
+                    <video controls preload="metadata" poster="./assets/images/video4.jpg" aria-label="Home Buying Guide">
+                        <source src="./assets/videos/video4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="shatta-video-info">
-                    <p>Journey through expansive desert landscapes with stunning sand formations.</p>
+                <div class="video-meta">
+                    <div class="video-meta-header">
+                        <img class="avatar" src="./assets/avatars/presenter4.jpg" alt="David Rodriguez" loading="lazy">
+                        <h3>Home Buying Guide</h3>
+                    </div>
+                    <p>Navigate the home buying process from mortgage pre-approval to closing with confidence.</p>
+                    <a href="#" class="transcript-link" data-transcript="transcript4">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        View Transcript
+                    </a>
                 </div>
             </article>
         </div>
-                </section>
+    </section>
 
+    <!-- Transcript Modal -->
+    <div class="modal" id="transcriptModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close transcript">×</button>
+            <div id="transcriptContent">
+                <!-- Transcript content will be inserted here -->
             </div>
+        </div>
+    </div>
+
+
+                            </div>
         </div>
     </main>
 
+    <!-- Overlay and Panels -->
     <div class="overlay-main-container">
-    <!-- Overlay and Panels moved here -->
-    <div class="overlay" id="overlay"></div>
-    
-    <!-- Search Panel -->
-    <div class="panel" id="search-panel">
-        <div class="panel-header">
-            <h3 class="panel-title">Search Artists & Content</h3>
-            <button class="close-panel" aria-label="Close search panel">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <input type="text" class="search-input" placeholder="Search for artists, tracks, or albums..." aria-label="Search input">
-        <button class="search-btn">Search</button>
-    </div>
-    
-    <!-- Notifications Panel -->
-    <div class="panel" id="notifications-panel">
-        <div class="panel-header">
-            <h3 class="panel-title">Notifications</h3>
-            <button class="close-panel" aria-label="Close notifications panel">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <ul class="notification-list">
-            <li class="notification-item">
-                <div class="notification-avatar">MJ</div>
-                <div class="notification-content">
-                    <div class="notification-artist">Maya Johnson</div>
-                    <div class="notification-text">Just released a new single "Midnight Dreams"</div>
-                    <div class="notification-time">2 hours ago</div>
-                </div>
-            </li>
-            <li class="notification-item">
-                <div class="notification-avatar">TK</div>
-                <div class="notification-content">
-                    <div class="notification-artist">The Kicks</div>
-                    <div class="notification-text">Added a new video to their channel</div>
-                    <div class="notification-time">5 hours ago</div>
-                </div>
-            </li>
-            <li class="notification-item">
-                <div class="notification-avatar">LR</div>
-                <div class="notification-content">
-                    <div class="notification-artist">Luna Rivers</div>
-                    <div class="notification-text">Started a live stream - join now!</div>
-                    <div class="notification-time">1 day ago</div>
-                </div>
-            </li>
-        </ul>
-        <a href="#" class="view-all">View All Notifications</a>
-    </div>
-    
-    <!-- Subscribe Panel -->
-    <div class="panel" id="subscribe-panel">
-        <div class="panel-header">
-            <h3 class="panel-title">Subscribe to Updates</h3>
-            <button class="close-panel" aria-label="Close subscribe panel">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <p class="subscribe-text">Get the latest news, releases, and artist updates delivered to your inbox.</p>
-        <input type="email" class="email-input" placeholder="Your email address" aria-label="Email address">
-        <div class="radio-group">
-            <div class="radio-option">
-                <input type="radio" id="daily" name="frequency" value="daily" checked>
-                <label for="daily">Daily</label>
+        <div class="overlay" id="overlay"></div>
+        
+        <!-- Search Panel -->
+        <div class="panel" id="search-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">Search Artists & Content</h3>
+                <button class="close-panel" aria-label="Close search panel">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="radio-option">
-                <input type="radio" id="weekly" name="frequency" value="weekly">
-                <label for="weekly">Weekly</label>
-            </div>
+            <input type="text" class="search-input" placeholder="Search for artists, tracks, or albums..." aria-label="Search input">
+            <button class="search-btn">Search</button>
         </div>
-        <button class="subscribe-btn">Subscribe</button>
+        
+        <!-- Notifications Panel -->
+        <div class="panel" id="notifications-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">Notifications</h3>
+                <button class="close-panel" aria-label="Close notifications panel">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="notification-list">
+                <li class="notification-item">
+                    <div class="notification-avatar">MJ</div>
+                    <div class="notification-content">
+                        <div class="notification-artist">Maya Johnson</div>
+                        <div class="notification-text">Just released a new single "Midnight Dreams"</div>
+                        <div class="notification-time">2 hours ago</div>
+                    </div>
+                </li>
+                <li class="notification-item">
+                    <div class="notification-avatar">TK</div>
+                    <div class="notification-content">
+                        <div class="notification-artist">The Kicks</div>
+                        <div class="notification-text">Added a new video to their channel</div>
+                        <div class="notification-time">5 hours ago</div>
+                    </div>
+                </li>
+                <li class="notification-item">
+                    <div class="notification-avatar">LR</div>
+                    <div class="notification-content">
+                        <div class="notification-artist">Luna Rivers</div>
+                        <div class="notification-text">Started a live stream - join now!</div>
+                        <div class="notification-time">1 day ago</div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="view-all">View All Notifications</a>
+        </div>
+        
+        <!-- Subscribe Panel -->
+        <div class="panel" id="subscribe-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">Subscribe to Updates</h3>
+                <button class="close-panel" aria-label="Close subscribe panel">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <p class="subscribe-text">Get the latest news, releases, and artist updates delivered to your inbox.</p>
+            <input type="email" class="email-input" placeholder="Your email address" aria-label="Email address">
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="daily" name="frequency" value="daily" checked>
+                    <label for="daily">Daily</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="weekly" name="frequency" value="weekly">
+                    <label for="weekly">Weekly</label>
+                </div>
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
     </div>
-    </div>
-                <!-- Newsletter Section -->
+    
+ <!-- Newsletter Section -->
     <section class="newsletter">
-        <div class="containera">
+        <div class="container">
             <h2>Stay Updated with NCB Media</h2>
             <p>Subscribe to our newsletter for exclusive content, industry insights, and special offers delivered straight to your inbox.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" id="news-letter-submit">Subscribe</button>
+                <div id="formMessage"></div>
             </form>
         </div>
     </section>
+
   
-    
-   <!-- Footer -->
+     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-container">
@@ -432,6 +438,12 @@
 
     
     </footer>
+  
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     </div>
     <script src="ncbmediavideos.js"></script>
 </body>

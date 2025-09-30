@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             // // Set active link                  
-            // const navLinks = document.querySelectorAll('.nav-link');
-            // navLinks.forEach(link => {
-            //     link.addEventListener('click', function(e) {
-            //         e.preventDefault();
-            //         navLinks.forEach(l => l.classList.remove('active'));
-            //         this.classList.add('active');
-            //     });
-            // });
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
             
             // Ad slider functionality
             const adSlides = document.getElementById('adSlides');
@@ -130,16 +130,76 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
             
-            // Newsletter form submission
-            const newsletterForm = document.querySelector('.newsletter-form');
-            if (newsletterForm) {
-                newsletterForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const email = this.querySelector('input[type="email"]').value;
-                    alert(`Thank you for subscribing with ${email}! You'll receive our next update soon.`);
-                    this.reset();
-                });
+               // Initialize EmailJS
+        (function(){
+            emailjs.init({
+                publicKey: "5bss0jQ2WCQiP00xw",
+            });
+        })();
+
+        // Newsletter form submission
+        const contactForm = document.getElementById("newsletter-form");
+        const submitButton = document.getElementById("news-letter-submit");
+        const formMessage = document.getElementById("formMessage");
+
+        // Form submission handler
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            // Basic form validation
+            if (!contactForm.checkValidity()) {
+                // If form is invalid, show browser's native validation messages
+                contactForm.reportValidity();
+                return;
             }
+
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.classList.add("btn-loading");
+            submitButton.textContent = "";
+            
+            // Your EmailJS service and template IDs
+            const serviceID = "service_89umglp";
+            const templateID = "template_h84y2uf";
+
+            // Send form data using EmailJS
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    // Success handling
+                    showMessage("Thank you for subscribing! We'll keep you updated.", "success");
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    // Error handling
+                    console.error("EmailJS error:", error);
+                    showMessage("Failed to subscribe. Please try again later.", "error");
+                })
+                .finally(() => {
+                    // Reset button state regardless of success or failure
+                    resetButtonState();
+                });
+        });
+
+        // Function to show message to user
+        function showMessage(text, type) {
+            formMessage.textContent = text;
+            formMessage.className = `form-message ${type}`;
+            formMessage.style.display = "block";
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = "none";
+            }, 5000);
+        }
+
+        // Function to reset button state
+        function resetButtonState() {
+            submitButton.disabled = false;
+            submitButton.classList.remove("btn-loading");
+            submitButton.textContent = "Subscribe";
+        }
+            
+         
             
             // Video data
             const videoData = [

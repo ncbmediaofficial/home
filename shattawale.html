@@ -16,6 +16,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "5bss0jQ2WCQiP00xw",
+      });
+   })();
+</script>
     <link rel="stylesheet" href="shattawale.css">
  </head>
   <body>
@@ -803,23 +813,17 @@
         </div>
       </div>
       <!-- Newsletter Section -->
-      <section class="newsletter">
+    <section class="newsletter">
         <div class="container">
-          <h2>Stay Updated with NCB Media</h2>
-          <p>
-            Subscribe to our newsletter for exclusive content, industry
-            insights, and special offers delivered straight to your inbox.
-          </p>
-          <form class="newsletter-form">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
+            <h2>Stay Updated with NCB Media</h2>
+            <p>Subscribe to our newsletter for exclusive content, industry insights, and special offers delivered straight to your inbox.</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit" id="news-letter-submit">Subscribe</button>
+                <div id="formMessage"></div>
+            </form>
         </div>
-      </section>
+    </section>
 
       <div class="overlay-main-container">
         <!-- Overlay and Panels moved here -->

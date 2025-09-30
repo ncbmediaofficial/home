@@ -47,14 +47,14 @@
             });
             
             // Set active link                  
-            // const navLinks = document.querySelectorAll('.nav-link');
-            // navLinks.forEach(link => {
-            //     link.addEventListener('click', function(e) {
-            //         e.preventDefault();
-            //         navLinks.forEach(l => l.classList.remove('active'));
-            //         this.classList.add('active');
-            //     });
-            // });
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
              // DOM Elements
             const tabs = document.querySelectorAll('.tab');
             const tabPanes = document.querySelectorAll('.tab-pane');
@@ -275,36 +275,159 @@
             adSlides.parentElement.addEventListener('mouseleave', startSlider);
             
             // Scroll to top functionality
-            const scrollTopBtn = document.getElementById('scrollTop');
+            // const scrollTopBtn = document.getElementById('scrollTop');
             
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    scrollTopBtn.classList.add('visible');
-                } else {
-                    scrollTopBtn.classList.remove('visible');
+            // window.addEventListener('scroll', () => {
+            //     if (window.pageYOffset > 300) {
+            //         scrollTopBtn.classList.add('visible');
+            //     } else {
+            //         scrollTopBtn.classList.remove('visible');
+            //     }
+            // });
+            
+            // scrollTopBtn.addEventListener('click', () => {
+            //     window.scrollTo({
+            //         top: 0,
+            //         behavior: 'smooth'
+            //     });
+            // });
+      // Newsletter form functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if EmailJS is loaded
+    if (typeof emailjs === 'undefined') {
+        console.error('EmailJS is not loaded. Please include the EmailJS SDK.');
+        showMessage('Newsletter service is currently unavailable. Please try again later.', 'error');
+        return;
+    }
+    
+    // Initialize EmailJS
+    try {
+        emailjs.init("5bss0jQ2WCQiP00xw");
+        console.log('EmailJS initialized successfully');
+    } catch (error) {
+        console.error('EmailJS initialization failed:', error);
+        showMessage('Service configuration error. Please contact support.', 'error');
+        return;
+    }
+    
+    const newsletterForm = document.getElementById("newsletter-form");
+    const submitButton = document.getElementById("news-letter-submit");
+    const formMessage = document.getElementById("formMessage");
+
+    // Form submission handler
+    newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Clear previous messages
+        hideMessage();
+
+        // Validate email
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+
+        if (!email) {
+            showMessage("Please enter your email address.", "error");
+            emailInput.focus();
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            showMessage("Please enter a valid email address.", "error");
+            emailInput.focus();
+            return;
+        }
+
+        // Show loading state
+        setLoadingState(true);
+
+        const serviceID = "service_89umglp";
+        const templateID = "template_h84y2uf";
+
+        // Send email using EmailJS
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                // Success
+                showMessage("Thank you for subscribing! We'll keep you updated.", "success");
+                newsletterForm.reset();
+            })
+            .catch((error) => {
+                // Error
+                console.error("EmailJS error:", error);
+                let errorMessage = "Failed to subscribe. Please try again later.";
+                
+                if (error.text && error.text.includes('quota')) {
+                    errorMessage = "Subscription service is temporarily unavailable. Please try again in a few minutes.";
+                } else if (error.status === 400) {
+                    errorMessage = "Invalid request. Please check your email address.";
+                } else if (error.status === 0) {
+                    errorMessage = "Network error. Please check your internet connection.";
                 }
+                
+                showMessage(errorMessage, "error");
+            })
+            .finally(() => {
+                // Reset button state
+                setLoadingState(false);
             });
-            
-            scrollTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Newsletter form submission
-            const newsletterForm = document.querySelector('.newsletter-form');
-            if (newsletterForm) {
-                newsletterForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const email = this.querySelector('input[type="email"]').value;
-                    alert(`Thank you for subscribing with ${email}! You'll receive our next update soon.`);
-                    this.reset();
-                });
-            }
+    });
 
+    // Email validation function
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
-          
+    // Function to show message
+    function showMessage(text, type) {
+        formMessage.textContent = text;
+        formMessage.className = `form-message ${type}`;
+        formMessage.style.display = "block";
+
+        // Auto-hide success messages after 5 seconds
+        if (type === "success") {
+            setTimeout(() => {
+                hideMessage();
+            }, 5000);
+        }
+    }
+
+    // Function to hide message
+    function hideMessage() {
+        formMessage.style.display = "none";
+        formMessage.className = "form-message";
+    }
+
+    // Function to set loading state
+    function setLoadingState(isLoading) {
+        if (isLoading) {
+            submitButton.disabled = true;
+            submitButton.classList.add('btn-loading');
+            submitButton.textContent = "";
+        } else {
+            submitButton.disabled = false;
+            submitButton.classList.remove('btn-loading');
+            submitButton.textContent = "Subscribe";
+        }
+    }
+
+    // Real-time email validation
+    const emailInput = newsletterForm.querySelector('input[type="email"]');
+    emailInput.addEventListener('blur', function() {
+        const email = this.value.trim();
+        if (email && !isValidEmail(email)) {
+            showMessage("Please enter a valid email address.", "error");
+        }
+    });
+
+    // Hide message when user starts typing again
+    emailInput.addEventListener('input', function() {
+        if (formMessage.style.display === "block" && formMessage.classList.contains("error")) {
+            hideMessage();
+        }
+    });
+});       
+     
+        
             
             emailjs.init("-S6x09iMI7pawysYq"); // Replace with your actual public key
 

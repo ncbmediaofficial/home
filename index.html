@@ -9,6 +9,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css">
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "5bss0jQ2WCQiP00xw",
+      });
+   })();
+</script>
     </head>
   <body>
     <div class="wrapper">
@@ -96,8 +106,8 @@
             <div class="story">
               <a href="shattawale.html">
                 <img
-                  src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=100&q=80"
-                  alt="Sarah Keys"
+                  src="shattawale.jpeg"
+                  alt="Shatta Wale"
                   class="story-img"
                 />
                 <div class="story-name">Shatta Wale</div>
@@ -348,25 +358,18 @@
           <button class="subscribe-btn">Subscribe</button>
         </div>
       </div>
-      <!-- Newsletter Section -->
-      <section class="newsletter">
-        <div class="container">
-          <h2>Stay Updated with NCB Media</h2>
-          <p>
-            Subscribe to our newsletter for exclusive content, industry
-            insights, and special offers delivered straight to your inbox.
-          </p>
-          <form class="newsletter-form">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-      </section>
-
+    <!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2>Stay Updated with NCB Media</h2>
+        <p>Subscribe to our newsletter for exclusive content, industry insights, and special offers delivered straight to your inbox.</p>
+        <form id="newsletter-form" class="newsletter-form" novalidate>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <button type="submit" id="news-letter-submit">Subscribe</button>
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </div>
+</section>
       <!-- Footer -->
       <footer class="footer">
         <div class="container">

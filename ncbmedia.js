@@ -275,160 +275,112 @@
             adSlides.parentElement.addEventListener('mouseleave', startSlider);
             
             // Scroll to top functionality
-            // const scrollTopBtn = document.getElementById('scrollTop');
+            const scrollTopBtn = document.getElementById('scrollTop');
             
-            // window.addEventListener('scroll', () => {
-            //     if (window.pageYOffset > 300) {
-            //         scrollTopBtn.classList.add('visible');
-            //     } else {
-            //         scrollTopBtn.classList.remove('visible');
-            //     }
-            // });
-            
-            // scrollTopBtn.addEventListener('click', () => {
-            //     window.scrollTo({
-            //         top: 0,
-            //         behavior: 'smooth'
-            //     });
-            // });
-      // Newsletter form functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if EmailJS is loaded
-    if (typeof emailjs === 'undefined') {
-        console.error('EmailJS is not loaded. Please include the EmailJS SDK.');
-        showMessage('Newsletter service is currently unavailable. Please try again later.', 'error');
-        return;
-    }
-    
-    // Initialize EmailJS
-    try {
-        emailjs.init("5bss0jQ2WCQiP00xw");
-        console.log('EmailJS initialized successfully');
-    } catch (error) {
-        console.error('EmailJS initialization failed:', error);
-        showMessage('Service configuration error. Please contact support.', 'error');
-        return;
-    }
-    
-    const newsletterForm = document.getElementById("newsletter-form");
-    const submitButton = document.getElementById("news-letter-submit");
-    const formMessage = document.getElementById("formMessage");
-
-    // Form submission handler
-    newsletterForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        // Clear previous messages
-        hideMessage();
-
-        // Validate email
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        const email = emailInput.value.trim();
-
-        if (!email) {
-            showMessage("Please enter your email address.", "error");
-            emailInput.focus();
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            showMessage("Please enter a valid email address.", "error");
-            emailInput.focus();
-            return;
-        }
-
-        // Show loading state
-        setLoadingState(true);
-
-        const serviceID = "service_89umglp";
-        const templateID = "template_h84y2uf";
-
-        // Send email using EmailJS
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                // Success
-                showMessage("Thank you for subscribing! We'll keep you updated.", "success");
-                newsletterForm.reset();
-            })
-            .catch((error) => {
-                // Error
-                console.error("EmailJS error:", error);
-                let errorMessage = "Failed to subscribe. Please try again later.";
-                
-                if (error.text && error.text.includes('quota')) {
-                    errorMessage = "Subscription service is temporarily unavailable. Please try again in a few minutes.";
-                } else if (error.status === 400) {
-                    errorMessage = "Invalid request. Please check your email address.";
-                } else if (error.status === 0) {
-                    errorMessage = "Network error. Please check your internet connection.";
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
                 }
-                
-                showMessage(errorMessage, "error");
-            })
-            .finally(() => {
-                // Reset button state
-                setLoadingState(false);
             });
-    });
-
-    // Email validation function
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    // Function to show message
-    function showMessage(text, type) {
-        formMessage.textContent = text;
-        formMessage.className = `form-message ${type}`;
-        formMessage.style.display = "block";
-
-        // Auto-hide success messages after 5 seconds
-        if (type === "success") {
-            setTimeout(() => {
-                hideMessage();
-            }, 5000);
-        }
-    }
-
-    // Function to hide message
-    function hideMessage() {
-        formMessage.style.display = "none";
-        formMessage.className = "form-message";
-    }
-
-    // Function to set loading state
-    function setLoadingState(isLoading) {
-        if (isLoading) {
-            submitButton.disabled = true;
-            submitButton.classList.add('btn-loading');
-            submitButton.textContent = "";
-        } else {
-            submitButton.disabled = false;
-            submitButton.classList.remove('btn-loading');
-            submitButton.textContent = "Subscribe";
-        }
-    }
-
-    // Real-time email validation
-    const emailInput = newsletterForm.querySelector('input[type="email"]');
-    emailInput.addEventListener('blur', function() {
-        const email = this.value.trim();
-        if (email && !isValidEmail(email)) {
-            showMessage("Please enter a valid email address.", "error");
-        }
-    });
-
-    // Hide message when user starts typing again
-    emailInput.addEventListener('input', function() {
-        if (formMessage.style.display === "block" && formMessage.classList.contains("error")) {
-            hideMessage();
-        }
-    });
-});       
-     
-        
             
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+      // Newsletter form functionality
+
+// Get form and message elements
+const newsletterForms = document.getElementById("newsletter-form");
+const submitButtons = document.getElementById("news-letter-submit");
+const formMessages = document.getElementById("formMessage");
+
+// Form submission handler
+newsletterForms.addEventListener("submit", function (event) {
+    event.preventDefault();
+    hideMessage();
+
+    // Validate email
+    const emailInput = newsletterForms.querySelector('input[type="email"]');
+    const email = emailInput.value.trim();
+
+    if (!email) {
+        showMessage("Please enter your email address.", "error");
+        emailInput.focus();
+        return;
+    }
+
+    if (!isValidEmail(email)) {
+        showMessage("Please enter a valid email address.", "error");
+        emailInput.focus();
+        return;
+    }
+
+    // Show loading state
+    setLoadingState(true);
+
+    const serviceID = "service_89umglp";
+    const templateID = "template_h84y2uf";
+
+    // Send email using EmailJS with publicKey in options
+    emailjs.sendForm(serviceID, templateID, this, {
+        publicKey: "5bss0jQ2WCQiP00xw", // Initialization is now here
+    })
+    .then(() => {
+        showMessage("Thank you for subscribing! We'll keep you updated.", "success");
+        newsletterForms.reset();
+    })
+    .catch((error) => {
+        console.log("Full error object:", error);
+        let userMessage = "Failed to subscribe. Please try again later.";
+
+        // Provide more specific error messages
+        if (error.text && error.text.includes("Gmail_API")) {
+            if (error.text.includes("insufficient authentication scopes") || error.text.includes("Invalid grant")) {
+                userMessage = "Service error. The administrator needs to reconnect the email account.";
+            }
+        }
+        showMessage(userMessage, 'error');
+    })
+    .finally(() => {
+        setLoadingState(false);
+    });
+});
+
+// The rest of your helper functions (isValidEmail, showMessage, hideMessage, setLoadingState) remain the same
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showMessage(text, type) {
+    formMessages.textContent = text;
+    formMessages.className = `form-message ${type}`;
+    formMessages.style.display = "block";
+    if (type === "success") {
+        setTimeout(() => { hideMessage(); }, 5000);
+    }
+}
+
+function hideMessage() {
+    formMessages.style.display = "none";
+    formMessages.className = "form-message";
+}
+
+function setLoadingState(isLoading) {
+    if (isLoading) {
+        submitButton.disabled = true;
+        submitButton.classList.add('btn-loading');
+        submitButton.textContent = "";
+    } else {
+        submitButton.disabled = false;
+        submitButton.classList.remove('btn-loading');
+        submitButton.textContent = "Subscribe";
+    }
+}        
             emailjs.init("-S6x09iMI7pawysYq"); // Replace with your actual public key
 
         const contactForm = document.getElementById("contactForm");

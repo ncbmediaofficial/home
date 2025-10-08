@@ -2534,6 +2534,12 @@ textarea {
     background-color: #cccccc;
     cursor: not-allowed;
 }
+.ncbmedia-about-container h2{
+  color: var(--light);
+}
+.ncbmedia-about-container p{
+  color: var(--light);
+}
 
 /* Loading state */
 .btn-loading {

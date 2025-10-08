@@ -1,24 +1,3 @@
- // Transcript data
-        const transcripts = {
-            transcript1: {
-                title: "Understanding Your Credit Score",
-                content: "<h3>Understanding Your Credit Score - Full Transcript</h3><p>Hello, I'm Sarah Johnson, a financial advisor with over 10 years of experience. Today we'll explore the fundamentals of credit scores.</p><p>A credit score is a three-digit number that represents your creditworthiness. Lenders use this number to evaluate how likely you are to repay borrowed money.</p><p>The most common scoring model is the FICO score, which ranges from 300 to 850. Higher scores indicate lower risk to lenders.</p><p>Your credit score is calculated based on several factors: payment history (35%), amounts owed (30%), length of credit history (15%), new credit (10%), and credit mix (10%).</p><p>To improve your credit score, focus on making payments on time, keeping credit card balances low, and avoiding unnecessary credit inquiries.</p><p>Regularly monitoring your credit report can help you spot errors and track your progress. You're entitled to a free credit report from each of the three major bureaus annually.</p>"
-            },
-            transcript2: {
-                title: "Budgeting for Beginners",
-                content: "<h3>Budgeting for Beginners - Full Transcript</h3><p>Hi, I'm Michael Chen. In this video, we'll walk through creating a budget that actually works for your life.</p><p>A budget is simply a plan for your money. It helps you ensure you have enough for what you need while working toward your financial goals.</p><p>Start by tracking your income and expenses for one month. Categorize your spending to see where your money is going.</p><p>The 50/30/20 rule is a popular budgeting framework: 50% for needs, 30% for wants, and 20% for savings and debt repayment.</p><p>Remember that a budget should be flexible. Life changes, and your budget should adapt with it.</p><p>Consider using budgeting apps or tools to automate tracking and stay motivated with your financial goals.</p>"
-            },
-            transcript3: {
-                title: "Investing Basics",
-                content: "<h3>Investing Basics - Full Transcript</h3><p>Welcome, I'm Jessica Williams. Today we'll cover the fundamentals of investing for your future.</p><p>Investing is putting your money to work to generate more money over time. The key principle is compound interest, which Albert Einstein called the eighth wonder of the world.</p><p>Before investing, ensure you have an emergency fund covering 3-6 months of expenses and have paid down high-interest debt.</p><p>Common investment options include stocks, bonds, mutual funds, and ETFs. Each carries different levels of risk and potential return.</p><p>Diversification is crucial - don't put all your eggs in one basket. A diversified portfolio can help manage risk.</p><p>Consider your time horizon and risk tolerance when choosing investments. Younger investors can typically afford to take more risk.</p>"
-            },
-            transcript4: {
-                title: "Home Buying Guide",
-                content: "<h3>Home Buying Guide - Full Transcript</h3><p>Hello, I'm David Rodriguez. Buying a home is one of the most significant financial decisions you'll make. Let's break down the process.</p><p>Start by checking your credit score and getting pre-approved for a mortgage. This shows sellers you're a serious buyer.</p><p>Determine your budget, including not just the purchase price but also closing costs, property taxes, insurance, and maintenance.</p><p>Work with a real estate agent who understands your needs and the local market. They can help you find properties that match your criteria.</p><p>Once you find a home, make an offer. If accepted, you'll enter into a contract and proceed with inspections and the mortgage application.</p><p>At closing, you'll sign numerous documents, pay closing costs, and receive the keys to your new home. Congratulations!</p>"
-            }
-        };
-
-
 document.addEventListener('DOMContentLoaded', function() {
             // Toggle panels
             const actionButtons = document.querySelectorAll('.action-btn');
@@ -143,44 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     scrollTopBtn.classList.remove('visible');
                 }
             });
-
-            const modal = document.getElementById('transcriptModal');
-            const transcriptContent = document.getElementById('transcriptContent');
-            const closeBtn = document.querySelector('.modal-close');
-            const transcriptLinks = document.querySelectorAll('.transcript-link');
-            
-            // Open modal when transcript link is clicked
-            transcriptLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const transcriptId = this.getAttribute('data-transcript');
-                    
-                    if (transcripts[transcriptId]) {
-                        transcriptContent.innerHTML = transcripts[transcriptId].content;
-                        modal.style.display = 'flex';
-                    }
-                });
-            });
-            
-            // Close modal when close button is clicked
-            closeBtn.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
-            
-            // Close modal when clicking outside content
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-            
-            // Close modal with Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modal.style.display === 'flex') {
-                    modal.style.display = 'none';
-                }
-            });
-  
             
             scrollTopBtn.addEventListener('click', () => {
                 window.scrollTo({
@@ -189,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
             
-            // Initialize EmailJS
+               // Initialize EmailJS
         (function(){
             emailjs.init({
                 publicKey: "5bss0jQ2WCQiP00xw",
@@ -259,5 +200,446 @@ document.addEventListener('DOMContentLoaded', function() {
         }
             
          
-        
+            
+            // Video data
+            // const videoData = [
+            //     {
+            //         id: 1,
+            //         title: "Shatta Wale Is The First And Governor in NCB Media",
+            //         artist: "Shatta Wale",
+            //         thumbnail: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&h=337&q=80",
+            //         views: "1.2M",
+            //         duration: "4:15",
+            //         uploadDate: "10/01/2025"
+            //     },
+               
+            // ];
+            
+            // // Function to render videos
+            // function renderVideos(videos, searchTerm = '') {
+            //     const container = document.getElementById('videos-container');
+            //     container.innerHTML = '';
+                
+            //     if (videos.length === 0) {
+            //         document.getElementById('no-results').style.display = 'block';
+            //         document.getElementById('results-count').textContent = 'No videos found';
+            //         return;
+            //     }
+                
+            //     document.getElementById('no-results').style.display = 'none';
+            //     document.getElementById('results-count').textContent = `Showing ${videos.length} ${videos.length === 1 ? 'video' : 'videos'}`;
+                
+            //     videos.forEach(video => {
+            //         const videoCard = document.createElement('div');
+            //         videoCard.className = 'video-card';
+            //         videoCard.innerHTML = `
+            //             <div class="video-thumbnail">
+            //                 <img src="${video.thumbnail}" alt="${video.title}">
+            //                 <div class="video-duration">${video.duration}</div>
+            //             </div>
+            //             <div class="video-content">
+            //                 <h3 class="video-title">${video.title}</h3>
+            //                 <p class="video-artist">${video.artist}</p>
+            //                 <div class="video-meta">
+            //                     <span class="video-views">
+            //                         <i class="fas fa-eye"></i> ${video.views} views
+            //                     </span>
+            //                     <span class="video-date">
+            //                         <i class="far fa-calendar-alt"></i> ${video.uploadDate}
+            //                     </span>
+            //                 </div>
+            //             </div>
+            //         `;
+            //         container.appendChild(videoCard);
+            //     });
+            // }
+            
+            // // Function to filter videos
+            // function filterVideos(searchTerm) {
+            //     if (!searchTerm.trim()) {
+            //         return videoData;
+            //     }
+                
+            //     const term = searchTerm.toLowerCase();
+            //     return videoData.filter(video => 
+            //         video.title.toLowerCase().includes(term) || 
+            //         video.artist.toLowerCase().includes(term)
+            //     );
+            // }
+            
+            // // Search functionality
+            // const searchInput = document.getElementById('search-input');
+            // const searchButton = document.getElementById('search-button');
+            
+            // // Real-time search as user types
+            // searchInput.addEventListener('input', debounce(() => {
+            //     const searchTerm = searchInput.value;
+            //     const filteredVideos = filterVideos(searchTerm);
+            //     renderVideos(filteredVideos);
+            // }, 300));
+            
+            // // Search button click
+            // searchButton.addEventListener('click', () => {
+            //     const searchTerm = searchInput.value;
+            //     const filteredVideos = filterVideos(searchTerm);
+            //     renderVideos(filteredVideos);
+            // });
+            
+            // // Enter key in search input
+            // searchInput.addEventListener('keyup', (e) => {
+            //     if (e.key === 'Enter') {
+            //         const searchTerm = searchInput.value;
+            //         const filteredVideos = filterVideos(searchTerm);
+            //         renderVideos(filteredVideos);
+            //     }
+            // });
+            
+            // // Debounce function for search
+            // function debounce(func, wait) {
+            //     let timeout;
+            //     return function executedFunction(...args) {
+            //         const later = () => {
+            //             clearTimeout(timeout);
+            //             func(...args);
+            //         };
+            //         clearTimeout(timeout);
+            //         timeout = setTimeout(later, wait);
+            //     };
+            // }
+            
+            // // Initial render
+            // renderVideos(videoData);
+
+            
         });
+        // interview-videos.js
+class InterviewVideos {
+  constructor() {
+    this.container = document.querySelector('.interview-videos-container');
+    this.videoContent = document.querySelector('.interview-video-content');
+    this.filterButtons = document.querySelectorAll('.interview-filter-buttons button');
+    this.searchInput = document.querySelector('[data-search-input]');
+    this.searchSubmit = document.querySelector('[data-search-submit]');
+    this.noResults = document.querySelector('.no-results');
+    
+    this.currentFilter = 'all';
+    this.currentSearch = '';
+    this.videos = [];
+    this.debounceTimeout = null;
+    
+    this.init();
+  }
+
+  async init() {
+    await this.loadVideos();
+    this.setupEventListeners();
+    this.renderVideos();
+  }
+
+  async loadVideos() {
+    try {
+      // In a real implementation, this would fetch from your API
+      // For now, using mock data as specified in requirements
+      const response = await fetch('./videos.json');
+      this.videos = await response.json();
+    } catch (error) {
+      console.error('Failed to load videos:', error);
+      // Fallback to static videos if fetch fails
+      this.videos = this.getStaticVideos();
+    }
+  }
+
+  getStaticVideos() {
+    return [
+      {
+        id: 1,
+        title: "Shatta Wale Becomes the First Governor of NCB Media",
+        description: "NCB Media proudly introduces Shatta Wale as our first Governor and featured artist, symbolizing a new era in music promotion. His creativity, energy, and influence embody our mission to elevate African talent globally. Shatta Wale leads the movement — inspiring artists and shaping the future of Afro-Dancehall. 🔥 #NCBMedia.",
+        category: "trending",
+        videoSrc: "videos/artist-one.mp4",
+        thumbnail: "images/artist-one-thumb.jpg",
+        avatar: "images/artist-one.jpg",
+        uploadDate: "2025-09-15",
+        duration: "15:30"
+      },
+    //   {
+    //     id: 2,
+    //     title: "Behind the Music: Artist Two",
+    //     description: "A deep dive into the musical journey of Artist Two, from early beginnings to current success. Features never-before-seen footage from early performances and personal reflections on career milestones.",
+    //     category: "popular",
+    //     videoSrc: "videos/artist-two.mp4",
+    //     thumbnail: "images/artist-two-thumb.jpg",
+    //     avatar: "images/artist-two.jpg",
+    //     uploadDate: "2025-09-10",
+    //     duration: "22:15"
+    //   },
+    //   {
+    //     id: 3,
+    //     title: "Rising Star: Artist Three",
+    //     description: "Meet the newest sensation taking the music world by storm. This interview covers their unique sound, influences, and what fans can expect from the debut album dropping next month.",
+    //     category: "new",
+    //     videoSrc: "videos/artist-three.mp4",
+    //     thumbnail: "images/artist-three-thumb.jpg",
+    //     avatar: "images/artist-three.jpg",
+    //     uploadDate: "2025-09-20",
+    //     duration: "18:45"
+    //   },
+    //   {
+    //     id: 4,
+    //     title: "Legendary Session with Artist Four",
+    //     description: "A rare sit-down with one of music's most influential figures. Discussing decades of industry experience, evolution of musical styles, and advice for aspiring artists in today's digital landscape.",
+    //     category: "trending",
+    //     videoSrc: "videos/artist-four.mp4",
+    //     thumbnail: "images/artist-four-thumb.jpg",
+    //     avatar: "images/artist-four.jpg",
+    //     uploadDate: "2025-09-05",
+    //     duration: "25:10"
+    //   }
+    ];
+  }
+
+  setupEventListeners() {
+    // Filter buttons
+    this.filterButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        this.handleFilterChange(e.target.dataset.filter);
+        this.updateButtonStates(e.target);
+      });
+    });
+
+    // Search input with debouncing
+    this.searchInput.addEventListener('input', (e) => {
+      this.debounceSearch(e.target.value);
+    });
+
+    // Search submit
+    this.searchSubmit.addEventListener('click', () => {
+      this.handleSearch(this.searchInput.value);
+    });
+
+    // Enter key in search
+    this.searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        this.handleSearch(this.searchInput.value);
+      }
+    });
+  }
+
+  debounceSearch(query) {
+    clearTimeout(this.debounceTimeout);
+    this.debounceTimeout = setTimeout(() => {
+      this.handleSearch(query);
+    }, 300);
+  }
+
+  handleFilterChange(filter) {
+    this.currentFilter = filter;
+    this.applyFilters();
+  }
+
+  handleSearch(query) {
+    this.currentSearch = query.toLowerCase().trim();
+    this.applyFilters();
+  }
+
+  applyFilters() {
+    const filteredVideos = this.videos.filter(video => {
+      const matchesFilter = this.currentFilter === 'all' || video.category === this.currentFilter;
+      const matchesSearch = !this.currentSearch || 
+        video.title.toLowerCase().includes(this.currentSearch) ||
+        video.description.toLowerCase().includes(this.currentSearch);
+      
+      return matchesFilter && matchesSearch;
+    });
+
+    this.renderFilteredVideos(filteredVideos);
+  }
+
+  updateButtonStates(activeButton) {
+    this.filterButtons.forEach(button => {
+      button.setAttribute('aria-pressed', button === activeButton ? 'true' : 'false');
+    });
+  }
+
+  renderVideos() {
+    this.videoContent.innerHTML = '';
+    
+    this.videos.forEach(video => {
+      const videoCard = this.createVideoCard(video);
+      this.videoContent.appendChild(videoCard);
+    });
+
+    this.injectStructuredData();
+    this.setupLazyLoading();
+  }
+
+  renderFilteredVideos(filteredVideos) {
+    const allCards = this.videoContent.querySelectorAll('.interview-video-card');
+    
+    // First, fade out all cards
+    allCards.forEach(card => {
+      card.classList.add('fade-out');
+    });
+
+    // After transition, update visibility
+    setTimeout(() => {
+      allCards.forEach(card => {
+        const videoId = parseInt(card.dataset.id);
+        const shouldShow = filteredVideos.some(video => video.id === videoId);
+        
+        card.classList.toggle('hidden', !shouldShow);
+        card.classList.remove('fade-out');
+      });
+
+      // Show/hide no results message
+      const hasResults = filteredVideos.length > 0;
+      this.noResults.toggleAttribute('hidden', hasResults);
+      
+      // Update accessible live region
+      if (!hasResults) {
+        this.noResults.textContent = `No videos found for "${this.currentSearch}" in ${this.currentFilter} category. Try adjusting your search or filter.`;
+      }
+    }, 300);
+  }
+
+  createVideoCard(video) {
+    const article = document.createElement('article');
+    article.className = 'interview-video-card';
+    article.dataset.id = video.id;
+    article.dataset.category = video.category;
+    article.dataset.name = video.title.toLowerCase().replace(/\s+/g, '-');
+
+    const shortDescription = video.description.length > 120 
+      ? video.description.substring(0, 120) + '...' 
+      : video.description;
+
+    article.innerHTML = `
+      <div class="interview-video-card-video">
+        <video width="640" height="360" controls preload="metadata" poster="${video.thumbnail}">
+          <source data-src="${video.videoSrc}" type="video/mp4">
+          <track kind="captions" src="captions/video-${video.id}.vtt" srclang="en" label="English">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="interview-video-card-info">
+        <h3 class="video-title">${this.escapeHtml(video.title)}</h3>
+        <p class="video-description">${this.escapeHtml(shortDescription)}</p>
+        <img class="artist-avatar" alt="${this.escapeHtml(video.title)} profile photo" loading="lazy" src="${video.avatar}">
+        <button class="read-more" aria-expanded="false">Read full description</button>
+      </div>
+    `;
+
+    // Add read more functionality
+    const readMoreBtn = article.querySelector('.read-more');
+    const description = article.querySelector('.video-description');
+    
+    readMoreBtn.addEventListener('click', () => {
+      const isExpanded = readMoreBtn.getAttribute('aria-expanded') === 'true';
+      readMoreBtn.setAttribute('aria-expanded', !isExpanded);
+      readMoreBtn.textContent = isExpanded ? 'Read full description' : 'Show less';
+      description.classList.toggle('expanded');
+      description.textContent = isExpanded ? shortDescription : video.description;
+    });
+
+    return article;
+  }
+
+  setupLazyLoading() {
+    // Use native lazy loading where supported, otherwise use Intersection Observer
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    } else {
+      this.lazyLoadWithIntersectionObserver();
+    }
+
+    // Lazy load videos when they come into view
+    this.lazyLoadVideos();
+  }
+
+  lazyLoadVideos() {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const video = entry.target;
+          const source = video.querySelector('source[data-src]');
+          
+          if (source && source.dataset.src) {
+            source.src = source.dataset.src;
+            video.load();
+            videoObserver.unobserve(video);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll('video').forEach(video => {
+      videoObserver.observe(video);
+    });
+  }
+
+  lazyLoadWithIntersectionObserver() {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+
+  injectStructuredData() {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": this.videos.map((video, index) => ({
+        "@type": "VideoObject",
+        "position": index + 1,
+        "name": video.title,
+        "description": video.description,
+        "thumbnailUrl": video.thumbnail,
+        "uploadDate": video.uploadDate,
+        "contentUrl": video.videoSrc,
+        "duration": video.duration
+      }))
+    };
+
+    const scriptTag = document.getElementById('structured-data');
+    scriptTag.textContent = JSON.stringify(structuredData);
+  }
+
+  escapeHtml(unsafe) {
+    return unsafe
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  new InterviewVideos();
+});
+
+// Fallback for no JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+  const videoContent = document.querySelector('.interview-video-content');
+  if (videoContent.children.length === 0) {
+    // If JS didn't load videos, show a message or static content
+    videoContent.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+        <p>Please enable JavaScript to view the video gallery.</p>
+      </div>
+    `;
+  }
+});

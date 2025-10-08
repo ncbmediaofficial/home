@@ -372,13 +372,13 @@ function hideMessage() {
 
 function setLoadingState(isLoading) {
     if (isLoading) {
-        submitButton.disabled = true;
-        submitButton.classList.add('btn-loading');
-        submitButton.textContent = "";
+        submitButtons.disabled = true;
+        submitButtons.classList.add('btn-loading');
+        submitButtons.textContent = "";
     } else {
-        submitButton.disabled = false;
-        submitButton.classList.remove('btn-loading');
-        submitButton.textContent = "Subscribe";
+        submitButtons.disabled = false;
+        submitButtons.classList.remove('btn-loading');
+        submitButtons.textContent = "Subscribe";
     }
 }        
             emailjs.init("-S6x09iMI7pawysYq"); // Replace with your actual public key
@@ -515,7 +515,7 @@ function setLoadingState(isLoading) {
           tipsubmitButton.disabled = true;
 
           const serviceID = "service_a8qfa3h";
-          const templateID = "template_f2km3eo";
+          const templateID = "template_9yvhvhn";
 
           emailjs.sendForm(serviceID, templateID, this).then(
             () => {

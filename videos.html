@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCB Media</title>
+    <title>NCB Media </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="ncbmediamusicians.css">
     <link rel="stylesheet" href="nbmediavideos.css">
-    <script type="text/javascript"
+        <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
@@ -16,7 +17,7 @@
       });
    })();
 </script>
-</head>
+    </head>
 <body>
      <div class="wrapper">
      <!-- Navigation Bar -->
@@ -171,119 +172,33 @@
             
             <!-- Main Video Container -->
             <div class="main-video-conatiner">
-                <section id="MusicVideos" aria-label="Educational videos">
-        <h2>Watch Your favorite Artist Interview Here</h2>
-        <div class="music-videos-grid">
-            <!-- Video Card 1 -->
-            <article class="video-card">
-                <div class="video-media">
-                    <video controls preload="metadata" poster="./assets/images/video1.jpg" aria-label="Understanding Your Credit Score">
-                        <source src="./assets/videos/video1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-meta">
-                    <div class="video-meta-header">
-                        <img class="avatar" src="./assets/avatars/presenter1.jpg" alt="Sarah Johnson" loading="lazy">
-                        <h3>Understanding Your Credit Score</h3>
-                    </div>
-                    <p>Learn how credit scores are calculated and discover practical tips to improve your score over time.</p>
-                    <a href="#" class="transcript-link" data-transcript="transcript1">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
-                        </svg>
-                        View Transcript
-                    </a>
-                </div>
-            </article>
+                <section class="interview-videos-container">
+  <h2>Your Favorite Interview Videos</h2>
+  <p>Watch your artist interview videos</p>
 
-            <!-- Video Card 2 -->
-            <article class="video-card">
-                <div class="video-media">
-                    <video controls preload="metadata" poster="./assets/images/video2.jpg" aria-label="Budgeting for Beginners">
-                        <source src="./assets/videos/video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-meta">
-                    <div class="video-meta-header">
-                        <img class="avatar" src="./assets/avatars/presenter2.jpg" alt="Michael Chen" loading="lazy">
-                        <h3>Budgeting for Beginners</h3>
-                    </div>
-                    <p>Create a simple yet effective budget that works for your lifestyle and financial goals.</p>
-                    <a href="#" class="transcript-link" data-transcript="transcript2">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
-                        </svg>
-                        View Transcript
-                    </a>
-                </div>
-            </article>
+  <div class="interview-filter-buttons" role="toolbar" aria-label="Filter interviews">
+    <button data-filter="all" aria-pressed="true">All artists</button>
+    <button data-filter="trending" aria-pressed="false">Trending artists</button>
+    <button data-filter="popular" aria-pressed="false">Popular artists</button>
+    <button data-filter="new" aria-pressed="false">New artists</button>
+  </div>
 
-            <!-- Video Card 3 -->
-            <article class="video-card">
-                <div class="video-media">
-                    <video controls preload="metadata" poster="./assets/images/video3.jpg" aria-label="Investing Basics">
-                        <source src="./assets/videos/video3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-meta">
-                    <div class="video-meta-header">
-                        <img class="avatar" src="./assets/avatars/presenter3.jpg" alt="Jessica Williams" loading="lazy">
-                        <h3>Investing Basics</h3>
-                    </div>
-                    <p>An introduction to investment concepts and strategies for building long-term wealth.</p>
-                    <a href="#" class="transcript-link" data-transcript="transcript3">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
-                        </svg>
-                        View Transcript
-                    </a>
-                </div>
-            </article>
+  <div class="interview-search-artist-container">
+    <input data-search-input type="text" name="q" placeholder="Search by title or description" aria-label="Search interviews" />
+    <button data-search-submit type="submit">Search</button>
+  </div>
 
-            <!-- Video Card 4 -->
-            <article class="video-card">
-                <div class="video-media">
-                    <video controls preload="metadata" poster="./assets/images/video4.jpg" aria-label="Home Buying Guide">
-                        <source src="./assets/videos/video4.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-meta">
-                    <div class="video-meta-header">
-                        <img class="avatar" src="./assets/avatars/presenter4.jpg" alt="David Rodriguez" loading="lazy">
-                        <h3>Home Buying Guide</h3>
-                    </div>
-                    <p>Navigate the home buying process from mortgage pre-approval to closing with confidence.</p>
-                    <a href="#" class="transcript-link" data-transcript="transcript4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
-                        </svg>
-                        View Transcript
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
+  <div class="interview-video-content">
+    <!-- Video cards will be dynamically inserted here -->
+  </div>
 
-    <!-- Transcript Modal -->
-    <div class="modal" id="transcriptModal">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close transcript">×</button>
-            <div id="transcriptContent">
-                <!-- Transcript content will be inserted here -->
+  <div class="no-results" hidden aria-live="polite">No videos found. Try adjusting your search or filter.</div>
+</section>
+
+<script type="application/ld+json" id="structured-data">
+  <!-- Structured data will be injected here -->
+</script>
             </div>
-        </div>
-    </div>
-
-
-                            </div>
         </div>
     </main>
 
@@ -364,7 +279,7 @@
         </div>
     </div>
     
- <!-- Newsletter Section -->
+    <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
             <h2>Stay Updated with NCB Media</h2>
@@ -377,7 +292,6 @@
         </div>
     </section>
 
-  
      <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -446,5 +360,5 @@
     </div>
     </div>
     <script src="ncbmediavideos.js"></script>
-</body>
+   </body>
 </html>

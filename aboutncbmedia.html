@@ -17,7 +17,7 @@
       });
    })();
 </script>
-<script type="text/javascript"
+<!-- <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
@@ -26,7 +26,7 @@
         publicKey: "bQOA8LExx-HEj0np3",
       });
    })();
-</script>
+</script> -->
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -55,6 +55,27 @@
    (function(){
       emailjs.init({
         publicKey: "5bss0jQ2WCQiP00xw",
+      });
+   })();
+</script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-S6x09iMI7pawysYq",
+      });
+   })();
+</script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "bQOA8LExx-HEj0np3",
       });
    })();
 </script>
@@ -747,29 +768,37 @@
             <div class="contact-form">
     <h2 class="section-title">Send us a message</h2>
     <form id="contactForm">
-        <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="name" name="name" class="input-control" placeholder="Enter your full name" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="input-control" placeholder="Enter your email address" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" class="input-control" placeholder="What is this regarding?" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" class="input-control" placeholder="How can we help you?" required></textarea>
-        </div>
-        
-        <button type="submit" class="btn" id="contat-nb-media">Send Message <i class="fas fa-paper-plane"></i></button>
-        <div class="form-message" id="formMessage"></div>
-    </form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="input-control" placeholder="Enter your full name" required>
+                <div class="validation-error" id="nameError">Please enter your full name</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="input-control" placeholder="Enter your email address" required>
+                <div class="validation-error" id="emailError">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="input-control" placeholder="What is this regarding?" required>
+                <div class="validation-error" id="subjectError">Please enter a subject</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="input-control" placeholder="How can we help you?" required></textarea>
+                <div class="validation-error" id="messageError">Please enter your message</div>
+            </div>
+            
+            <button type="submit" class="btn" id="submitButton">
+                <span class="btn-text">Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+            
+            <div class="form-message" id="formMessage"></div>
+        </form>
 </div>
             
             <div class="contact-info">
@@ -810,10 +839,22 @@
                 </div>
                 
                 <div class="social-links">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                   <a href="https://web.facebook.com/profile.php?id=61582079367262"><i class="fab fa-facebook-f"></i></a>
+    
+
+
+
+<!-- or inline SVG for absolute control -->
+<a href="https://x.com/ncbmedia33" aria-label="NCB Media on X">
+  <!-- tiny inline SVG X logo (replace with official logo if needed) -->
+  <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</a>
+                        <a href="https://www.instagram.com/ncbmedia/"><i class="fab fa-instagram"></i></a>
+                       
+                        <a href="https://www.tiktok.com/@ncbmediaofficial"><i class="fa-brands fa-tiktok"></i></i></a>
+                        <a href="https://www.tiktok.com/@ncbmediaofficial"><i class="fa-brands fa-telegram"></i></a>
                 </div>
                 
                 <div class="map-container">
@@ -934,7 +975,7 @@
                         <textarea id="message" name="message" placeholder="Tell us about your advertising goals, target audience, and campaign timeline..." required></textarea>
                     </div>
                     
-                    <button type="submit" id="advert-submit-btn">Submit Inquiry</button>
+                    <button type="submit" id="advert-submit-btn" class="advertSubmitBtn">Submit Inquiry</button>
                     <div class="advert-form-message" id="advertFormMessage"></div>
                 </form>
             </section>
@@ -1215,13 +1256,24 @@
                     </div>
                 </a>
             </div>
-                    <p class="footer-descriptions">A dedicated platform for musicians to learn, share, and grow. We provide valuable resources, tutorials, and industry insights to help you succeed in your musical journey.</p>
+                    <p class="footer-descriptions">NCB Media — Where artists are discovered, stories are shared, and music comes alive.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61582079367262"><i class="fab fa-facebook-f"></i></a>
+    
+
+
+
+<!-- or inline SVG for absolute control -->
+<a href="https://x.com/ncbmedia33" aria-label="NCB Media on X">
+  <!-- tiny inline SVG X logo (replace with official logo if needed) -->
+  <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</a>
+                        <a href="https://www.instagram.com/ncbmedia/"><i class="fab fa-instagram"></i></a>
+                       
+                        <a href="https://www.tiktok.com/@ncbmediaofficial"><i class="fa-brands fa-tiktok"></i></i></a>
+                        <a href="https://www.tiktok.com/@ncbmediaofficial"><i class="fa-brands fa-telegram"></i></a>
                     </div>
                 </div>
                 

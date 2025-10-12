@@ -380,70 +380,7 @@ function setLoadingState(isLoading) {
         submitButtons.classList.remove('btn-loading');
         submitButtons.textContent = "Subscribe";
     }
-}        
-            emailjs.init("-S6x09iMI7pawysYq"); // Replace with your actual public key
-
-        const contactForm = document.getElementById("contactForm");
-        const submitButton = document.getElementById("contat-nb-media");
-        const formMessage = document.getElementById("formMessage");
-
-        // Form submission handler
-        contactForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            
-            // Basic form validation
-            if (!contactForm.checkValidity()) {
-                // If form is invalid, show browser's native validation messages
-                contactForm.reportValidity();
-                return;
-            }
-
-            // Show loading state
-            submitButton.disabled = true;
-            submitButton.classList.add("btn-loading");
-            submitButton.textContent = "";
-            
-            // Your EmailJS service and template IDs
-            const serviceID = "service_z7pun6r";
-            const templateID = "template_fi5zrxk";
-
-            // Send form data using EmailJS
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    // Success handling
-                    showMessage("Message sent successfully!", "success");
-                    contactForm.reset();
-                })
-                .catch((error) => {
-                    // Error handling
-                    console.error("EmailJS error:", error);
-                    showMessage("Failed to send message. Please try again later.", "error");
-                })
-                .finally(() => {
-                    // Reset button state regardless of success or failure
-                    resetButtonState();
-                });
-        });
-
-        // Function to show message to user
-        function showMessage(text, type) {
-            formMessage.textContent = text;
-            formMessage.className = `form-message ${type}`;
-            formMessage.style.display = "block";
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = "none";
-            }, 5000);
-        }
-
-        // Function to reset button state
-        function resetButtonState() {
-            submitButton.disabled = false;
-            submitButton.classList.remove("btn-loading");
-            submitButton.textContent = "Send Message";
-            submitButton.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
-        }
+}  
 
 
 
@@ -453,55 +390,61 @@ function setLoadingState(isLoading) {
 
 
 
-         // EmailJS Form Submission - Using official documentation code
-          emailjs.init("bQOA8LExx-HEj0np3");
-      const advertSubmitBtn = document.getElementById("advert-submit-btn");
 
-      document
-        .getElementById("ad-inquiry-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
 
-          // Show loading state
-          advertSubmitBtn.value = "Sending...";
-          advertSubmitBtn.disabled = true;
 
-          const serviceID = "service_45g6l5u";
-          const templateID = "template_yo30gge";
 
-          emailjs.sendForm(serviceID, templateID, this).then(
-            () => {
-              advertSubmitBtn.value = "Send Message";
-              advertSubmitBtn.disabled = false;
-              document.getElementById("tipFormMessage").textContent =
-                "Message sent successfully!";
-              document.getElementById("tipFormMessage").className =
-                "advert-form-message success";
-              this.reset();
+    // // Initialize EmailJS with potential security options
+    // emailjs.init({
+    //   publicKey: "bQOA8LExx-HEj0np3",
+    //   blockHeadless: true, // Blocks requests from headless browsers
+    //   limitRate: {
+    //     id: "app", // Enforces rate limiting per page
+    //     throttle: 1000 // 1 request per second (1000 ms)
+    //   }
+    // });
 
-              // Hide message after 5 seconds
-              setTimeout(() => {
-                document.getElementById("advertFormMessage").style.display = "none";
-              }, 5000);
-            },
-            (err) => {
-              advertSubmitBtn.value = "Send Message";
-              advertSubmitBtn.disabled = false;
-              document.getElementById("advertFormMessage").textContent =
-                "Failed to send message: " + JSON.stringify(err);
-              document.getElementById("advertFormMessage").className =
-                "advert-form-message error";
+    // const form = document.getElementById('ad-inquiry-form');
+    // const advertSubmitBtn = document.getElementById('advert-submit-btn');
 
-              // Hide message after 5 seconds
-              setTimeout(() => {
-                document.getElementById("advertFormMessage").style.display = "none";
-              }, 5000);
-            }
-          );
-        });
-            
-           
-         // EmailJS Form Submission - Using official documentation code
+    // form.addEventListener('submit', function(event) {
+    //   event.preventDefault();
+      
+    //   advertSubmitBtn.textContent = 'Sending...';
+    //   advertSubmitBtn.disabled = true;
+
+    //   const serviceID = 'service_45g6l5u';
+    //   const templateID = 'template_i20a6tl';
+
+    //   emailjs.sendForm(serviceID, templateID, this)
+    //     .then(() => {
+    //       // Success handling remains the same
+    //       advertSubmitBtn.textContent = 'Submit Inquiry';
+    //       advertSubmitBtn.disabled = false;
+    //       const messageElement = document.getElementById('advertFormMessage');
+    //       messageElement.textContent = 'Message sent successfully!';
+    //       messageElement.className = 'advert-form-message success';
+    //       messageElement.style.display = 'block';
+    //       form.reset();
+    //       setTimeout(() => {
+    //         messageElement.style.display = 'none';
+    //       }, 5000);
+    //     })
+    //     .catch((err) => {
+    //       // Enhanced error logging
+    //       console.error('EmailJS Failed...', err);
+    //       advertSubmitBtn.textContent = 'Submit Inquiry';
+    //       advertSubmitBtn.disabled = false;
+    //       const messageElement = document.getElementById('advertFormMessage');
+    //       messageElement.textContent = 'Failed to send message. Please check the console for details.';
+    //       messageElement.className = 'advert-form-message error';
+    //       messageElement.style.display = 'block';
+    //       setTimeout(() => {
+    //         messageElement.style.display = 'none';
+    //       }, 5000);
+    //     });
+    // });
+    //    // EmailJS Form Submission - Using official documentation code
           emailjs.init("HfkEQUn-Hzex22E68");
       const tipsubmitButton = document.getElementById("tip-submit-btn");
 
@@ -594,7 +537,337 @@ function setLoadingState(isLoading) {
             }
           );
         });
+            // Initialize EmailJS with your public key
+        emailjs.init("-S6x09iMI7pawysYq"); // Replace with your actual public key
+
+        // DOM elements
+        const contactForm = document.getElementById("contactForm");
+        const submitButton = document.getElementById("submitButton");
+        const btnText = submitButton.querySelector(".btn-text");
+        const formMessage = document.getElementById("formMessage");
+        
+        // Input elements for validation
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const subjectInput = document.getElementById("subject");
+        const messageInput = document.getElementById("message");
+        
+        // Error elements
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const subjectError = document.getElementById("subjectError");
+        const messageError = document.getElementById("messageError");
+
+        // Form validation functions
+        function validateName() {
+            if (nameInput.value.trim().length < 2) {
+                showError(nameInput, nameError, "Name must be at least 2 characters");
+                return false;
+            } else {
+                showSuccess(nameInput, nameError);
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                showError(emailInput, emailError, "Please enter a valid email address");
+                return false;
+            } else {
+                showSuccess(emailInput, emailError);
+                return true;
+            }
+        }
+
+        function validateSubject() {
+            if (subjectInput.value.trim().length < 5) {
+                showError(subjectInput, subjectError, "Subject must be at least 5 characters");
+                return false;
+            } else {
+                showSuccess(subjectInput, subjectError);
+                return true;
+            }
+        }
+
+        function validateMessage() {
+            if (messageInput.value.trim().length < 10) {
+                showError(messageInput, messageError, "Message must be at least 10 characters");
+                return false;
+            } else {
+                showSuccess(messageInput, messageError);
+                return true;
+            }
+        }
+
+        function showError(input, errorElement, message) {
+            errorElement.textContent = message;
+            errorElement.style.display = "block";
+            input.classList.add("input-error");
+            input.classList.remove("input-success");
+        }
+
+        function showSuccess(input, errorElement) {
+            errorElement.style.display = "none";
+            input.classList.remove("input-error");
+            input.classList.add("input-success");
+        }
+
+        // Real-time validation
+        nameInput.addEventListener("blur", validateName);
+        emailInput.addEventListener("blur", validateEmail);
+        subjectInput.addEventListener("blur", validateSubject);
+        messageInput.addEventListener("blur", validateMessage);
+
+        // Form submission handler
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
             
+            // Validate all fields
+            const isNameValid = validateName();
+            const isEmailValid = validateEmail();
+            const isSubjectValid = validateSubject();
+            const isMessageValid = validateMessage();
+            
+            if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+                showMessage("Please fix the errors above before submitting.", "error");
+                return;
+            }
+
+            // Show loading state
+            setLoadingState(true);
+            
+            // Your EmailJS service and template IDs
+            const serviceID = "service_z7pun6r"; // Replace with your service ID
+            const templateID = "template_fi5zrxk"; // Replace with your template ID
+
+            try {
+                // Send form data using EmailJS
+                const response = await emailjs.sendForm(serviceID, templateID, this);
+                
+                // Success handling
+                showMessage("Your message has been sent successfully! We'll get back to you soon.", "success");
+                contactForm.reset();
+                
+                // Remove success classes from inputs
+                document.querySelectorAll('.input-success').forEach(el => {
+                    el.classList.remove('input-success');
+                });
+                
+            } catch (error) {
+                // Error handling
+                console.error("EmailJS error:", error);
+                
+                let errorMessage = "Failed to send message. Please try again later.";
+                
+                // Provide more specific error messages based on the error
+                if (error.text && error.text.includes("Invalid template ID")) {
+                    errorMessage = "Configuration error: Please check your template ID.";
+                } else if (error.text && error.text.includes("Invalid service ID")) {
+                    errorMessage = "Configuration error: Please check your service ID.";
+                }
+                
+                showMessage(errorMessage, "error");
+            } finally {
+                // Reset button state regardless of success or failure
+                setLoadingState(false);
+            }
+        });
+
+        // Function to show message to user
+        function showMessage(text, type) {
+            formMessage.textContent = text;
+            formMessage.className = `form-message ${type}`;
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === "success") {
+                setTimeout(() => {
+                    formMessage.style.display = "none";
+                }, 5000);
+            }
+        }
+
+        // Function to set loading state
+        function setLoadingState(isLoading) {
+            if (isLoading) {
+                submitButton.disabled = true;
+                submitButton.classList.add("btn-loading");
+                btnText.textContent = "Sending...";
+            } else {
+                submitButton.disabled = false;
+                submitButton.classList.remove("btn-loading");
+                btnText.textContent = "Send Message";
+            }
+        }
+   
+       
+       
+        // Initialize EmailJS with your public key
+        emailjs.init("bQOA8LExx-HEj0np3"); // Replace with your actual public key
+
+        // DOM elements
+        const adInquiryForm = document.getElementById("ad-inquiry-form");
+        const advertSubmitBtn = document.getElementById("advert-submit-btn");
+        const advertBtn = submitButton.querySelector(".advertSubmitBtn");
+        const advertFormMessage = document.getElementById("advertFormMessage");
+        
+        // Input elements for validation
+        const advertNameInput = document.getElementById("name");
+        const advertEmailInput = document.getElementById("email");
+        const advertCompany = document.getElementById("company");
+        const advertAdType = document.getElementById("ad-type");
+        const advertMessageInput = document.getElementById("message");
+        
+        // Error elements
+        const advertNameError = document.getElementById("nameError");
+        const advertEmailError = document.getElementById("emailError");
+        const advertCompanyError = document.getElementById("companyError");
+        const advertAdTypeError = document.getElementById("ad-typeError");
+        const advertMessageError = document.getElementById("messageError");
+
+        // Form validation functions
+        function validateName() {
+            if (advertNameInput.value.trim().length < 2) {
+                showError(advertNameInput, advertNameError, "Name must be at least 2 characters");
+                return false;
+            } else {
+                showSuccess(advertNameInput, advertNameError);
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(advertEmailInput.value.trim())) {
+                showError(advertEmailInput, advertEmailError, "Please enter a valid email address");
+                return false;
+            } else {
+                showSuccess(advertEmailInput, advertEmailError);
+                return true;
+            }
+        }
+
+        function validateCompany() {
+            if (validateCompany.value.trim()) {
+                showError(advertCompany, advertCompanyError, "Subject must be at least 5 characters");
+                return false;
+            } else {
+                showSuccess(advertCompany, advertCompanyError);
+                return true;
+            }
+        }
+
+        function validateMessage() {
+            if (advertMessageInput.value.trim().length < 10) {
+                showError(advertMessageInput, advertMessageError, "Message must be at least 10 characters");
+                return false;
+            } else {
+                showSuccess(advertMessageInput, advertMessageError);
+                return true;
+            }
+        }
+
+        function showError(input, errorElement, message) {
+            errorElement.textContent = message;
+            errorElement.style.display = "block";
+            input.classList.add("input-error");
+            input.classList.remove("input-success");
+        }
+
+        function showSuccess(input, errorElement) {
+            errorElement.style.display = "none";
+            input.classList.remove("input-error");
+            input.classList.add("input-success");
+        }
+
+        // Real-time validation
+        advertNameInput.addEventListener("blur", validateName);
+        advertEmailInput.addEventListener("blur", validateEmail);
+        advertCompany.addEventListener("blur", validateCompany);
+        advertMessageInput.addEventListener("blur", validateMessage);
+
+        // Form submission handler
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            
+            // Validate all fields
+            const isNameValid = validateName();
+            const isEmailValid = validateEmail();
+            const isSubjectValid = validateSubject();
+            const isMessageValid = validateMessage();
+            
+            if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+                showMessage("Please fix the errors above before submitting.", "error");
+                return;
+            }
+
+            // Show loading state
+            setLoadingState(true);
+            
+            // Your EmailJS service and template IDs
+            const serviceID = "service_45g6l5u"; // Replace with your service ID
+            const templateID = "template_suokrge"; // Replace with your template ID
+
+            try {
+                // Send form data using EmailJS
+                const response = await emailjs.sendForm(serviceID, templateID, this);
+                
+                // Success handling
+                showMessage("Your message has been sent successfully! We'll get back to you soon.", "success");
+                contactForm.reset();
+                
+                // Remove success classes from inputs
+                document.querySelectorAll('.input-success').forEach(el => {
+                    el.classList.remove('input-success');
+                });
+                
+            } catch (error) {
+                // Error handling
+                console.error("EmailJS error:", error);
+                
+                let errorMessage = "Failed to send message. Please try again later.";
+                
+                // Provide more specific error messages based on the error
+                if (error.text && error.text.includes("Invalid template ID")) {
+                    errorMessage = "Configuration error: Please check your template ID.";
+                } else if (error.text && error.text.includes("Invalid service ID")) {
+                    errorMessage = "Configuration error: Please check your service ID.";
+                }
+                
+                showMessage(errorMessage, "error");
+            } finally {
+                // Reset button state regardless of success or failure
+                setLoadingState(false);
+            }
+        });
+
+        // Function to show message to user
+        function showMessage(text, type) {
+            formMessage.textContent = text;
+            formMessage.className = `form-message ${type}`;
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === "success") {
+                setTimeout(() => {
+                    formMessage.style.display = "none";
+                }, 5000);
+            }
+        }
+
+        // Function to set loading state
+        function setLoadingState(isLoading) {
+            if (isLoading) {
+                submitButton.disabled = true;
+                submitButton.classList.add("btn-loading");
+                btnText.textContent = "Sending...";
+            } else {
+                submitButton.disabled = false;
+                submitButton.classList.remove("btn-loading");
+                btnText.textContent = "Send Message";
+            }
+        }
+   
+       
            
         });
        

@@ -75,7 +75,7 @@
             data-panel="notifications-panel"
           >
             <i class="fas fa-bell"></i>
-            <span class="notification-badge">3</span>
+            <span class="notification-badge">1</span>
           </button>
           <button
             class="action-btn"
@@ -221,11 +221,105 @@
       <div class="main-content-container">
         <!-- Tab Content -->
         <div class="tab-content">
+          
           <!-- Posts Section -->
           <section id="posts" class="tab-pane active">
             <h2 class="section-title">Latest Posts</h2>
             <div class="posts-grid">
-              <div class="post-card">
+              <div class="post-card" id="postcard1">
+                <div class="post-header">
+                  <img
+                    src="shattawale.jpeg"
+                    alt="Shatta Wale"
+                    class="post-avatar"
+                  />
+                  <div>
+                    <div class="post-user">Shatta Wale</div>
+                    <div class="post-time">10/18/2025</div>
+                  </div>
+                </div>
+                <!-- NEW: Post container wrapper -->
+                <div class="post-container">
+                  <div class="post-content">
+                    <h5>
+                     ShattaFest 2025: <em>Shatta Wale’s</em> All-White Birthday Concert at Black Star Square
+                    </h5>
+                    <p class="post-text">
+                    In mid-October 2025, Ghana’s capital comes alive for one of the year’s biggest Accra events. <em>Shatta Wale’s</em> birthday concert, ShattaFest 2025<strong> (a.k.a. Shattabration)</strong>, is set for Saturday and Sunday, October, 2025, at Accra’s historic Independence Square <strong>(Black Star Square)</strong>
+
+<li> Gates open in all time for this epic show </li>
+
+<li> Best of all, the concert is free to attend <em> Shatta Wale’s</em> own invitation even proudly declares <strong>“FREE ENTRY!”</strong></li>
+
+<li> Fans should come ready to celebrate in true style.</li>
+                    </p>
+                    <h5>All-White Dress Code Dress to Celebrate</h5>
+                    <p class="post-text">
+                     A signature feature of <em>ShattaFest</em> is the strict all-white dress code. In keeping with <em>Shatta Wale’s</em> signature style, attendees are asked to don all-white outfits from head to toe
+
+. The official theme is “white on white” – as Shatta’s promos cheerfully command: <strong>“Come dressed in white”</strong>
+
+. This will turn Independence Square into a sea of white, symbolizing unity and turning the crowd into a massive fashion statement for the night.
+                    </p>
+                    <h5>Star-Studded Lineup: Ghanaian Hits & Crowd-Pleasers</h5>
+                    <p class="post-text">
+                     ShattaFest always brings together Ghana’s hottest artists, and the 2025 lineup is no exception. Confirmed artists include
+
+<li>Wendy Shay</li>
+<li>Fancy Gadam</li>
+<li>Medikal</li>
+<li>Tinny</li>
+<li>JZyNo</li>
+<li>Jupitar</li>
+<li>Empress Gifty</li>
+<li>Kwame Yogot</li>
+<li>Captan</li>
+<li>Rashid Metal</li>
+<li>Togyal Renner</li>
+<li>Mandem Yopic</li>
+<li>Chuku Lion</li>
+
+Each of these stars will perform their biggest hits, guaranteeing non-stop entertainment. And that’s just the beginning – organisers are teasing dozens more surprise performers to join the fun, making ShattaFest feel like a full-scale Ghana music festival.
+                    </p>
+                    <div class="highlight-box">
+                      <h5>Hosted By NCB Media Official & Surprise Acts</h5>
+                      <p>
+                        <strong>Note:</strong>Adding to the excitement, <em>NCB Media Official</em> will masterfully emcee the night’s proceedings
+. Known for our vibrant style, <em>NCB Media Official</em> will keep the crowd hyped between sets. Beyond the announced lineup, organizers promise dozens of additional surprise acts. Fans should be ready for impromptu guest appearances and bonus performances at any moment, keeping the energy sky-high all night long.
+                      </p>
+                    </div>
+                    <h5>Free Entry A Gift to Fans</h5>
+                    <p class="post-text">
+                      Perhaps the best news for fans is that entry is completely free
+. This is the ultimate in free Ghana concerts – a top-tier star lineup with no ticket needed. Shatta Wale and his partners are making the party accessible to everyone, so you can just show up, enjoy the show, and soak in the atmosphere without a care. It’s a true festival vibe under the Accra sky.
+                    </p>
+                    <h5>Don’t Miss Ghana’s Biggest Music Party of the Year</h5>
+                    <p class="post-text">
+                     All in all, <em>ShattaFest</em> 2025 promises to be one of the year’s can’t-miss music events. It will feel like an all-out Ghana music festival at Black Star Square, with a pulsating stage, a sea of white-clad fans, and nonstop hits. As <em>Shatta Wale</em> himself puts it, “Let’s make this one for the history books”
+. Mark <em>October18</em> on your calendar and come dressed in white – this free concert extravaganza is shaping up to be the highlight of Accra’s 2025 events!
+                    </p>
+                    <img
+                      src="shattafest.png"
+                      alt="shatta wale post"
+                      class="post-image"
+                    />
+                  </div>
+                </div>
+                <!-- <div class="post-actions">
+                                <div class="post-action">
+                                    <i class="material-icons">favorite_border</i>
+                                    <span>243</span>
+                                </div>
+                                <div class="post-action">
+                                    <i class="material-icons">chat_bubble_outline</i>
+                                    <span>42</span>
+                                </div>
+                                <div class="post-action">
+                                    <i class="material-icons">share</i>
+                                </div>
+                            </div> -->
+              </div>
+              <div class="post-card" id="postcard">
                 <div class="post-header">
                   <img
                     src="shattawale.jpeg"
@@ -823,6 +917,10 @@
                 <a href="#" class="advert-cta">Buy Tickets</a>
               </div>
             </div>
+              <!-- Navigation buttons -->
+        <button class="ad-nav prev" id="prevBtn">❮</button>
+        <button class="ad-nav next" id="nextBtn">❯</button>
+
             <div class="advert-navigation">
               <div class="advert-dot active" data-index="0"></div>
               <div class="advert-dot" data-index="1"></div>
@@ -875,16 +973,16 @@
           </div>
           <ul class="notification-list">
             <li class="notification-item">
-              <div class="notification-avatar">MJ</div>
+              <div class="notification-avatar">SW</div>
               <div class="notification-content">
-                <div class="notification-artist">Maya Johnson</div>
+                <div class="notification-artist">Shatta Wale</div>
                 <div class="notification-text">
-                  Just released a new single "Midnight Dreams"
+                  Just released a new single "Midnight Dreams"Become first Artist and Governor to NCB Media
                 </div>
-                <div class="notification-time">2 hours ago</div>
+                <div class="notification-time">August 22, 2025</div>
               </div>
             </li>
-            <li class="notification-item">
+            <!-- <li class="notification-item">
               <div class="notification-avatar">TK</div>
               <div class="notification-content">
                 <div class="notification-artist">The Kicks</div>
@@ -903,7 +1001,7 @@
                 </div>
                 <div class="notification-time">1 day ago</div>
               </div>
-            </li>
+            </li> -->
           </ul>
           <a href="#" class="view-all">View All Notifications</a>
         </div>

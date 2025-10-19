@@ -248,6 +248,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Advert Slider Functionality
         const advertSlides = document.querySelectorAll(".advert-slide");
         const advertDots = document.querySelectorAll(".advert-dot");
+          const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
         let currentSlide = 0;
 
         // Function to show a specific slide
@@ -266,6 +268,25 @@ document.addEventListener("DOMContentLoaded", function () {
             advertSlides[currentSlide].classList.add("next");
             advertSlides[index].classList.add("prev");
           }
+           // Next slide function
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Previous slide function
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Start auto rotation
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Stop auto rotation
+        function stopSlider() {
+            clearInterval(slideInterval);
+        }
 
           // Set new current slide
           setTimeout(() => {
@@ -277,6 +298,9 @@ document.addEventListener("DOMContentLoaded", function () {
             currentSlide = index;
           }, 10);
         }
+        // Add click events to navigation buttons
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
 
         // Add click events to dots
         advertDots.forEach((dot, index) => {

@@ -56,61 +56,66 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
             
-            // Ad slider functionality
             const adSlides = document.getElementById('adSlides');
-            const indicators = document.querySelectorAll('.ad-indicator');
-            let currentSlide = 0;
-            let slideInterval;
+        const indicators = document.querySelectorAll('.ad-indicator');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        let slideInterval;
+        
+        // Function to show a specific slide
+        function showSlide(index) {
+            // Wrap around if at ends
+            if (index >= indicators.length) index = 0;
+            if (index < 0) index = indicators.length - 1;
             
-            // Function to show a specific slide
-            function showSlide(index) {
-                // Wrap around if at ends
-                if (index >= indicators.length) index = 0;
-                if (index < 0) index = indicators.length - 1;
-                
-                adSlides.style.transform = `translateX(-${index * 100}%)`;
-                
-                // Update indicators
-                indicators.forEach(indicator => indicator.classList.remove('active'));
-                indicators[index].classList.add('active');
-                
-                currentSlide = index;
-            }
+            adSlides.style.transform = `translateX(-${index * 100}%)`;
             
-            // Next slide function
-            function nextSlide() {
-                showSlide(currentSlide + 1);
-            }
+            // Update indicators
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            indicators[index].classList.add('active');
             
-            // Previous slide function
-            function prevSlide() {
-                showSlide(currentSlide - 1);
-            }
-            
-            // Start auto rotation
-            function startSlider() {
-                slideInterval = setInterval(nextSlide, 5000);
-            }
-            
-            // Stop auto rotation
-            function stopSlider() {
-                clearInterval(slideInterval);
-            }
-            
-            // Add click events to indicators
-            indicators.forEach(indicator => {
-                indicator.addEventListener('click', function() {
-                    const index = parseInt(this.getAttribute('data-index'));
-                    showSlide(index);
-                });
+            currentSlide = index;
+        }
+        
+        // Next slide function
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        // Previous slide function
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Start auto rotation
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        
+        // Stop auto rotation
+        function stopSlider() {
+            clearInterval(slideInterval);
+        }
+        
+        // Add click events to indicators
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                showSlide(index);
             });
-            
-            // Start the slider
-            startSlider();
-            
-            // Pause on hover
-            adSlides.parentElement.addEventListener('mouseenter', stopSlider);
-            adSlides.parentElement.addEventListener('mouseleave', startSlider);
+        });
+        
+        // Add click events to navigation buttons
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        
+        // Start the slider
+        startSlider();
+        
+        // Pause on hover
+        adSlides.parentElement.addEventListener('mouseenter', stopSlider);
+        adSlides.parentElement.addEventListener('mouseleave', startSlider);
             
             // Scroll to top functionality
             const scrollTopBtn = document.getElementById('scrollTop');

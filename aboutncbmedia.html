@@ -179,7 +179,7 @@
                         <div class="stat-label">Artist</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-value">1</div>
+                        <div class="stat-value">2</div>
                         <div class="stat-label">Post</div>
                     </div>
                     <div class="stat-item">
@@ -278,49 +278,53 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="video-advert-container">
-            <!-- Ad Container -->
-            <div class="ad-container">
-                <div class="ad-slides" id="adSlides">
-                    <!-- Ad 1 -->
-                    <div class="ad-slide">
-                        <div class="ad-image" style="background: linear-gradient(45deg, #ff416c, #ff4b2b);"></div>
-                        <div class="ad-overlay"></div>
-                        <div class="ad-content">
-                            <h2 class="ad-title">Premium Streaming Experience</h2>
-                            <p class="ad-desc">Get ad-free streaming, exclusive content, and 4K quality with NCB Premium. Start your free trial today!</p>
-                            <a href="#" class="ad-btn">Try Premium</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Ad 2 -->
-                    <div class="ad-slide">
-                        <div class="ad-image" style="background: linear-gradient(45deg, #4e54c8, #8f94fb);"></div>
-                        <div class="ad-overlay"></div>
-                        <div class="ad-content">
-                            <h2 class="ad-title">New Content Every Week</h2>
-                            <p class="ad-desc">Discover fresh videos from your favorite creators. Never miss an update with personalized notifications.</p>
-                            <a href="#" class="ad-btn">Explore Now</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Ad 3 -->
-                    <div class="ad-slide">
-                        <div class="ad-image" style="background: linear-gradient(45deg, #24C6DC, #514A9D);"></div>
-                        <div class="ad-overlay"></div>
-                        <div class="ad-content">
-                            <h2 class="ad-title">Download & Watch Offline</h2>
-                            <p class="ad-desc">Take your videos anywhere. Download content to watch when you're offline. Available on all plans.</p>
-                            <a href="#" class="ad-btn">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="ad-indicators" id="adIndicators">
-                    <div class="ad-indicator active" data-index="0"></div>
-                    <div class="ad-indicator" data-index="1"></div>
-                    <div class="ad-indicator" data-index="2"></div>
+            <!-- Ad Container - Appears FIRST on mobile/iPad -->
+          <div class="ad-container">
+               <div class="ad-slides" id="adSlides">
+            <!-- Ad 1 -->
+            <div class="ad-slide">
+                <div class="ad-image" style="background: linear-gradient(45deg, #ff416c, #ff4b2b);"></div>
+                <div class="ad-overlay"></div>
+                <div class="ad-content">
+                    <h2 class="ad-title">Premium Streaming Experience</h2>
+                    <p class="ad-desc">Get ad-free streaming, exclusive content, and 4K quality with NCB Premium. Start your free trial today!</p>
+                    <a href="#" class="ad-btn">Try Premium</a>
                 </div>
             </div>
+            
+            <!-- Ad 2 -->
+            <div class="ad-slide">
+                <div class="ad-image" style="background: linear-gradient(45deg, #4e54c8, #8f94fb);"></div>
+                <div class="ad-overlay"></div>
+                <div class="ad-content">
+                    <h2 class="ad-title">New Content Every Week</h2>
+                    <p class="ad-desc">Discover fresh videos from your favorite creators. Never miss an update with personalized notifications.</p>
+                    <a href="#" class="ad-btn">Explore Now</a>
+                </div>
+            </div>
+            
+            <!-- Ad 3 -->
+            <div class="ad-slide">
+                <div class="ad-image" style="background: linear-gradient(45deg, #24C6DC, #514A9D);"></div>
+                <div class="ad-overlay"></div>
+                <div class="ad-content">
+                    <h2 class="ad-title">Download & Watch Offline</h2>
+                    <p class="ad-desc">Take your videos anywhere. Download content to watch when you're offline. Available on all plans.</p>
+                    <a href="#" class="ad-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation buttons -->
+        <button class="ad-nav prev" id="prevBtn">❮</button>
+        <button class="ad-nav next" id="nextBtn">❯</button>
+        
+        <div class="ad-indicators" id="adIndicators">
+            <div class="ad-indicator active" data-index="0"></div>
+            <div class="ad-indicator" data-index="1"></div>
+            <div class="ad-indicator" data-index="2"></div>
+        </div>
+          </div>
             
             <!-- Main Video Container -->
             <div class="main-video-conatiner">
@@ -1229,18 +1233,23 @@
     </div>
     
 
-<!-- Your existing newsletter section -->
-<section class="newsletter">
-    <div class="ncbmedia-about-container">
-        <h2>Stay Updated with NCB Media</h2>
-        <p>Subscribe to our newsletter for exclusive content, industry insights, and special offers delivered straight to your inbox.</p>
-        <form id="newsletter-form" class="newsletter-form" novalidate>
-            <input type="email" name="email" placeholder="Enter your email address" required>
-            <button type="submit" id="news-letter-submit">Subscribe</button>
-            <div id="formMessage" class="form-message"></div>
-        </form>
-    </div>
-</section>
+ <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="containers">
+            <h2>Stay Updated with NCB Media</h2>
+            <p>Subscribe to our newsletter for exclusive content, industry insights, and special offers delivered straight to your inbox.</p>
+            <form id="newsletter-form" class="newsletter-form" novalidate>
+                <input type="email" name="email" id="email-input" placeholder="Enter your Gmail address" required>
+                <div id="validation-indicator" class="validation-indicator">
+                    <span class="validation-icon error-icon">!</span>
+                    <span id="validation-text">Please enter a valid Gmail address</span>
+                </div>
+                <button type="submit" id="news-letter-submit">Subscribe</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
 
 
   

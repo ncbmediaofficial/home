@@ -55,7 +55,7 @@
             </button>
             <button class="action-btn" aria-label="Notifications" data-panel="notifications-panel">
                 <i class="fas fa-bell"></i>
-                <span class="notification-badge">3</span>
+                <span class="notification-badge">1</span>
             </button>
             <button class="action-btn" aria-label="Subscribe" data-panel="subscribe-panel">
                 <i class="fas fa-envelope"></i>
@@ -162,6 +162,10 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Navigation buttons -->
+        <button class="ad-nav prev" id="prevBtn">❮</button>
+        <button class="ad-nav next" id="nextBtn">❯</button>
                 
                 <div class="ad-indicators" id="adIndicators">
                     <div class="ad-indicator active" data-index="0"></div>
@@ -228,14 +232,14 @@
             </div>
             <ul class="notification-list">
                 <li class="notification-item">
-                    <div class="notification-avatar">MJ</div>
+                    <div class="notification-avatar"><a href="shattawale.html#posts">SW</a></div>
                     <div class="notification-content">
-                        <div class="notification-artist">Maya Johnson</div>
-                        <div class="notification-text">Just released a new single "Midnight Dreams"</div>
-                        <div class="notification-time">2 hours ago</div>
+                        <div class="notification-artist"><a href="shattawale.html#posts">Shatta Wale</a></div>
+                        <div class="notification-text">Become first Artist and Governor to NCB Media</div>
+                        <div class="notification-time">August 22, 2025</div>
                     </div>
                 </li>
-                <li class="notification-item">
+                <!-- <li class="notification-item">
                     <div class="notification-avatar">TK</div>
                     <div class="notification-content">
                         <div class="notification-artist">The Kicks</div>
@@ -250,9 +254,9 @@
                         <div class="notification-text">Started a live stream - join now!</div>
                         <div class="notification-time">1 day ago</div>
                     </div>
-                </li>
+                </li> -->
             </ul>
-            <a href="#" class="view-all">View All Notifications</a>
+            <!-- <a href="#" class="view-all">View All Notifications</a> -->
         </div>
         
         <!-- Subscribe Panel -->
@@ -279,15 +283,19 @@
         </div>
     </div>
     
-    <!-- Newsletter Section -->
+   <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
             <h2>Stay Updated with NCB Media</h2>
             <p>Subscribe to our newsletter for exclusive content, industry insights, and special offers delivered straight to your inbox.</p>
-            <form id="newsletter-form" class="newsletter-form">
-                <input type="email" name="email" placeholder="Enter your email address" required>
+            <form id="newsletter-form" class="newsletter-form" novalidate>
+                <input type="email" name="email" id="email-input" placeholder="Enter your Gmail address" required>
+                <div id="validation-indicator" class="validation-indicator">
+                    <span class="validation-icon error-icon">!</span>
+                    <span id="validation-text">Please enter a valid Gmail address</span>
+                </div>
                 <button type="submit" id="news-letter-submit">Subscribe</button>
-                <div id="formMessage"></div>
+                <div id="formMessage" class="form-message"></div>
             </form>
         </div>
     </section>

@@ -114,12 +114,12 @@
         </div>
         
         <div class="actions-container">
-            <button class="action-btn" aria-label="Search" data-panel="search-panel">
+            <!-- <button class="action-btn" aria-label="Search" data-panel="search-panel">
                 <i class="fas fa-search"></i>
-            </button>
+            </button> -->
             <button class="action-btn" aria-label="Notifications" data-panel="notifications-panel">
                 <i class="fas fa-bell"></i>
-                <span class="notification-badge">3</span>
+                <span class="notification-badge">1</span>
             </button>
             <button class="action-btn" aria-label="Subscribe" data-panel="subscribe-panel">
                 <i class="fas fa-envelope"></i>
@@ -1159,77 +1159,85 @@
     <div class="overlay-main-container">
         <div class="overlay" id="overlay"></div>
         
-        <!-- Search Panel -->
-        <div class="panel" id="search-panel">
-            <div class="panel-header">
-                <h3 class="panel-title">Search Artists & Content</h3>
-                <button class="close-panel" aria-label="Close search panel">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <input type="text" class="search-input" placeholder="Search for artists, tracks, or albums..." aria-label="Search input">
-            <button class="search-btn">Search</button>
-        </div>
-        
-        <!-- Notifications Panel -->
+         <!-- Notifications Panel -->
         <div class="panel" id="notifications-panel">
-            <div class="panel-header">
-                <h3 class="panel-title">Notifications</h3>
-                <button class="close-panel" aria-label="Close notifications panel">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="notification-list">
-                <li class="notification-item">
-                    <div class="notification-avatar"><a href="shattawale.html">SW</a></div>
-                    <div class="notification-content">
-                        <div class="notification-artist"><a href="shattawale.html">Shatta Wale</a></div>
-                        <div class="notification-text">The Richest Artist In Ghana</div>
-                        <div class="notification-time">20/ 08/ 2025</div>
-                    </div>
-                </li>
-                <!-- <li class="notification-item">
-                    <div class="notification-avatar">TK</div>
-                    <div class="notification-content">
-                        <div class="notification-artist">The Kicks</div>
-                        <div class="notification-text">Added a new video to their channel</div>
-                        <div class="notification-time">5 hours ago</div>
-                    </div>
-                </li>
-                <li class="notification-item">
-                    <div class="notification-avatar">LR</div>
-                    <div class="notification-content">
-                        <div class="notification-artist">Luna Rivers</div>
-                        <div class="notification-text">Started a live stream - join now!</div>
-                        <div class="notification-time">1 day ago</div>
-                    </div>
-                </li> -->
-            </ul>
-            <a href="#" class="view-all">View All Notifications</a>
+          <div class="panel-header">
+            <h3 class="panel-title">Notifications</h3>
+            <button class="close-panel" aria-label="Close notifications panel">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <ul class="notification-list">
+            <li class="notification-item">
+              <div class="notification-avatar">SW</div>
+              <div class="notification-content">
+                <div class="notification-artist">Shatta Wale</div>
+                <div class="notification-text">
+                  Shatta Wale Become First Artist To NCB Media
+                </div>
+                <div class="notification-time">August 22, 2025</div>
+              </div>
+            </li>
+            <!-- <li class="notification-item">
+              <div class="notification-avatar">TK</div>
+              <div class="notification-content">
+                <div class="notification-artist">The Kicks</div>
+                <div class="notification-text">
+                  Added a new video to their channel
+                </div>
+                <div class="notification-time">5 hours ago</div>
+              </div>
+            </li>
+            <li class="notification-item">
+              <div class="notification-avatar">LR</div>
+              <div class="notification-content">
+                <div class="notification-artist">Luna Rivers</div>
+                <div class="notification-text">
+                  Started a live stream - join now!
+                </div>
+                <div class="notification-time">1 day ago</div>
+              </div>
+            </li> -->
+          </ul>
+          <!-- <a href="#" class="view-all">View All Notifications</a> -->
         </div>
-        
         <!-- Subscribe Panel -->
         <div class="panel" id="subscribe-panel">
-            <div class="panel-header">
-                <h3 class="panel-title">Subscribe to Updates</h3>
-                <button class="close-panel" aria-label="Close subscribe panel">
-                    <i class="fas fa-times"></i>
-                </button>
+          <div class="panel-header">
+            <h3 class="panel-title">Subscribe to Updates</h3>
+            <button class="close-panel" aria-label="Close subscribe panel">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <p class="subscribe-text">
+            Get the latest news, releases, and artist updates delivered to your
+            inbox.
+          </p>
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Your email address"
+            aria-label="Email address"
+          />
+          <div class="radio-group">
+            <div class="radio-option">
+              <input
+                type="radio"
+                id="daily"
+                name="frequency"
+                value="daily"
+                checked
+              />
+              <label for="daily">Daily</label>
             </div>
-            <p class="subscribe-text">Get the latest news, releases, and artist updates delivered to your inbox.</p>
-            <input type="email" class="email-input" placeholder="Your email address" aria-label="Email address">
-            <div class="radio-group">
-                <div class="radio-option">
-                    <input type="radio" id="daily" name="frequency" value="daily" checked>
-                    <label for="daily">Daily</label>
-                </div>
-                <div class="radio-option">
-                    <input type="radio" id="weekly" name="frequency" value="weekly">
-                    <label for="weekly">Weekly</label>
-                </div>
+            <div class="radio-option">
+              <input type="radio" id="weekly" name="frequency" value="weekly" />
+              <label for="weekly">Weekly</label>
             </div>
-            <button class="subscribe-btn">Subscribe</button>
+          </div>
+          <button class="subscribe-btn">Subscribe</button>
         </div>
+
     </div>
     
 

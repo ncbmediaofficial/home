@@ -572,7 +572,7 @@ class InterviewVideos {
         category: "trending",
         videoSrc: "videos/artist-one.mp4",
         thumbnail: "images/artist-one-thumb.jpg",
-        avatar: "images/artist-one.jpg",
+        avatar: "shattawale.jpeg",
         uploadDate: "2025-09-15",
         duration: "15:30"
       },

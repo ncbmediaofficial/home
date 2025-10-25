@@ -18,6 +18,36 @@
             --shadow: 0 4px 20px rgba(0,0,0,0.08);
             --transition: all 0.3s ease;
             --border-radius: 12px;
+
+              /* Semantic Colors */
+            --bg-primary: var(--darker);
+            --bg-secondary: var(--dark);
+            --bg-accent: var(--accent);
+            --text-primary: var(--light);
+            --text-secondary: var(--light-gray);
+            --text-muted: var(--gray);
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            
+            /* Effects */
+            --shadow: 0 4px 20px rgba(0,0,0,0.15);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.25);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+            
+            /* Typography */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.25rem;
+            --font-size-xl: 1.5rem;
+            --font-size-2xl: 2rem;
+            --font-size-3xl: 3rem;
         }
 
         html {
@@ -549,7 +579,7 @@
             order: 2;
             width: 100%;
             margin: 0 auto;
-            background: white;
+            background: var(--dark);
             border-radius: var(--radius);
             box-shadow: 0 12px 40px rgba(0,0,0,0.1);
             overflow: hidden;
@@ -1617,6 +1647,7 @@ body {
   font-weight: 700;
   margin-bottom: var(--spacing-xs);
   text-align: center;
+  color: var(--light);
 }
 
 .interview-videos-container > p {

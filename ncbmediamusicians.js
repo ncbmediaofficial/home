@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 id: 1,
                 name: "Shatta Wale",
                 genre: "Dancehall",
-                image: "shattawale.jpeg",
+                image: "shattawale.png",
                 link: "shattawale.html"
             },
             // {

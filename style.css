@@ -895,6 +895,12 @@ section.stories-section {
             height: 100%;
         }
 
+        .safa-album-ad{
+            background: url("safaalbum.webp");
+            background-position: center;
+            background-size: cover;
+        }
+
         .ad-slide {
             min-width: 100%;
             height: 100%;
@@ -905,7 +911,7 @@ section.stories-section {
         }
 
         .ad-content {
-            padding: 30px;
+            padding: 25px;
             z-index: 2;
             flex: 1;
             display: flex;
@@ -914,20 +920,26 @@ section.stories-section {
         }
 
         .ad-title {
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 800;
             margin-bottom: 15px;
-            color: var(--text-primary);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            color: var(--light);
+            text-align: center;
+            text-transform: capitalize;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .ad-desc {
-            color: rgba(255, 255, 255, 0.9);
+          text-transform: capitalize;
+            color: var(--warning);
+            font-weight: 600;
             margin-bottom: 25px;
-            font-size: 1.2rem;
+            background: linear-gradient(rgba(0,0,0,0.2));
+            font-size: 1.5rem;
             line-height: 1.5;
             max-width: 500px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .ad-btn {
@@ -941,13 +953,13 @@ section.stories-section {
             transition: var(--transition);
             font-size: 1rem;
             align-self: flex-start;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .ad-btn:hover {
-            background: var(--accent-dark);
+            background: var(--warning);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
         .ad-image {
@@ -965,14 +977,10 @@ section.stories-section {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.7) 0%,
-                rgba(0, 0, 0, 0.4) 100%
-            );
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
             z-index: 1;
         }
-
+       
         /* Ad indicators */
         .ad-indicators {
             position: absolute;

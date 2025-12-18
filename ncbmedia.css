@@ -257,12 +257,14 @@ a:hover {
 
 .profile-image:hover img {
   transform: scale(1.05);
+  
 }
 /* Improved Profile Info Section */
 .profile-info {
   padding: 30px 5% 0;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -280,11 +282,12 @@ a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  
   background: linear-gradient(to right, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
@@ -810,6 +813,13 @@ section.stories-section {
             height: 100%;
         }
 
+         
+        .safa-album-ad{
+            background: url("safaalbum.webp");
+            background-position: center;
+            background-size: cover;
+        }
+
         .ad-slide {
             min-width: 100%;
             height: 100%;
@@ -820,7 +830,7 @@ section.stories-section {
         }
 
         .ad-content {
-            padding: 30px;
+            padding: 25px;
             z-index: 2;
             flex: 1;
             display: flex;
@@ -829,20 +839,26 @@ section.stories-section {
         }
 
         .ad-title {
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 800;
             margin-bottom: 15px;
-            color: var(--text-primary);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            color: var(--light);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            text-transform: capitalize;
         }
 
         .ad-desc {
-            color: rgba(255, 255, 255, 0.9);
+          text-transform: capitalize;
+            color: var(--warning);
+            font-weight: 900;
             margin-bottom: 25px;
-            font-size: 1.2rem;
+            background: linear-gradient(rgba(0,0,0,0.2));
+            font-size: 1.5rem;
             line-height: 1.5;
             max-width: 500px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .ad-btn {
@@ -856,13 +872,13 @@ section.stories-section {
             transition: var(--transition);
             font-size: 1rem;
             align-self: flex-start;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .ad-btn:hover {
-            background: var(--accent-dark);
+            background: var(--warning);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
         .ad-image {
@@ -880,14 +896,10 @@ section.stories-section {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.7) 0%,
-                rgba(0, 0, 0, 0.4) 100%
-            );
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
             z-index: 1;
         }
-
+       
         /* Ad indicators */
         .ad-indicators {
             position: absolute;
@@ -2060,6 +2072,7 @@ textarea.input-control {
 .container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -2619,15 +2632,26 @@ textarea {
             max-width: 90%;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+        .container{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
-        .newsletter h2 {
+        .newsletter .container h2 {
             font-size: 2.5rem;
+            color: white;
+          text-align: center;
             margin-bottom: 20px;
             font-weight: 700;
         }
 
-        .newsletter p {
+        .newsletter .container p {
             font-size: 1.2rem;
+            text-align: center;
+            color: white;
+
             max-width: 600px;
             margin: 0 auto 40px;
             opacity: 0.9;
@@ -2943,6 +2967,7 @@ textarea {
 @media (min-width: 992px) {
   .artist-name {
     font-size: 2.2rem;
+    margin-bottom: 20px;
   }
 
   .stats {
@@ -3050,6 +3075,7 @@ textarea {
 
   .artist-name {
     font-size: 2rem;
+    margin-bottom: 20px;
   }
 
   .section-title {
@@ -3162,6 +3188,7 @@ textarea {
 
   .artist-name {
     font-size: 1.8rem;
+    margin-bottom: 20px;
   }
 
   .badge-container {

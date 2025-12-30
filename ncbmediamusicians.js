@@ -536,13 +536,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 image: "shattawale.png",
                 link: "shattawale.html"
             },
-            // {
-            //     id: 2,
-            //     name: "Burna Boy",
-            //     genre: "Afrobeats",
-            //     image: "shattawale.jpeg",
-            //     link: "burnaboy.html"
-            // },
+             {
+                id: 2,
+                name: "Stone Bwoy",
+                genre: "Dancehall",
+                image: "stonebwoyprofile.png",
+                 link: "stonebwoy.html"
+             },
             // {
             //     id: 3,
             //     name: "Taylor Swift",

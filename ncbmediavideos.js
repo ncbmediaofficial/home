@@ -565,18 +565,18 @@ class InterviewVideos {
 
   getStaticVideos() {
     return [
-      {
-        id: 1,
-        title: "Shatta Wale Becomes the First Governor of NCB Media",
-        description: "NCB Media proudly introduces Shatta Wale as our first artist, symbolizing a new era in music promotion. His creativity, energy, and influence embody our mission to elevate Musicians talent globally. Shatta Wale leads the movement — inspiring artists and shaping the future of Afro-Dancehall. 🔥 #NCBMedia.",
-        category: "popular",
-        category: "trending",
-        videoSrc: "videos/artist-one.mp4",
-        thumbnail: "images/artist-one-thumb.jpg",
-        avatar: "shattawale.jpeg",
-        uploadDate: "2025-09-15",
-        duration: "15:30"
-      },
+      // {
+      //   id: 1,
+      //   title: "Shatta Wale Becomes the First Governor of NCB Media",
+      //   description: "NCB Media proudly introduces Shatta Wale as our first artist, symbolizing a new era in music promotion. His creativity, energy, and influence embody our mission to elevate Musicians talent globally. Shatta Wale leads the movement — inspiring artists and shaping the future of Afro-Dancehall. 🔥 #NCBMedia.",
+      //   category: "popular",
+      //   category: "trending",
+      //   videoSrc: "videos/artist-one.mp4",
+      //   thumbnail: "images/artist-one-thumb.jpg",
+      //   avatar: "shattawale.jpeg",
+      //   uploadDate: "2025-09-15",
+      //   duration: "15:30"
+      // },
     //   {
     //     id: 2,
     //     title: "Behind the Music: Artist Two",

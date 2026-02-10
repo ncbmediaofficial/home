@@ -374,6 +374,9 @@ a:hover {
   transform: translateY(-3px);
   border-radius: 8px;
 }
+.stat-item a{
+  text-decoration: none;
+}
 
 .stat-value {
   font-size: 1.8rem;

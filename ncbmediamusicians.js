@@ -543,6 +543,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 image: "stonebwoyprofile.png",
                  link: "stonebwoy.html"
              },
+             {
+                id: 2,
+                name: "Vybz Kartel",
+                genre: "Dancehall",
+                image: "vybzkartel.png",
+                 link: "vybzkartel.html"
+             },
             // {
             //     id: 3,
             //     name: "Taylor Swift",
